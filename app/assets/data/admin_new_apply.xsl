@@ -10,15 +10,13 @@
   </xsl:variable>
 -->
   <xsl:template match="/">
-
-
-        <div class="d-inline bg-success">Nowe zgłoszenia:
-<ul>
-    <xsl:apply-templates select="//inquiry" />
-</ul>
-        </div>
-
+    <div class="d-inline bg-success">Nowe zgłoszenia:
+      <ul>
+        <xsl:apply-templates select="//inquiry" />
+      </ul>
+    </div>
   </xsl:template>
+  
 <!-- <xsl:value-of select="$key"/> -->
   <xsl:template match="inquiry">
     <xsl:variable name="key" select="@Key"/>
