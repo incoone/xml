@@ -14,9 +14,9 @@
     <div class="py-5">
       <div class="container home">
         <!-- <xsl:apply-templates select="//Order[@Key=$key]/Event" /> -->
-        <xsl:apply-templates select="//Order[@Key=$key and Customer/TelNo=$main_phone]/Event" />
-<!--
-        <xsl:if test="count(//Order[@Key=$key and Customer/TelNo=$main_phone] &lt; 1">
+        <xsl:apply-templates select="//Order[@Key=$key and Customer/TelNo=$main_phone]" />
+
+        <xsl:if test="count(//Order[@Key=$key and Customer/TelNo=$main_phone]/Event) &lt; 1">
           <xsl:choose>
             <xsl:when test="count(//inquiry[@Key=$key and phone=$main_phone]) &lt; 1">
               <div class="bg-danger text-white">
@@ -30,13 +30,17 @@
               </div>
             </xsl:otherwise>
           </xsl:choose>
-        </xsl:if>-->
+        </xsl:if>
       </div>
     </div>
   </xsl:template>
 
   <xsl:template match="inquiry">
     <xsl:value-of select="mail"/><br/>
+  </xsl:template>
+
+  <xsl:template match="Order">
+    <xsl:apply-templates select="Event"/>
   </xsl:template>
 
   <xsl:template match="Event">
