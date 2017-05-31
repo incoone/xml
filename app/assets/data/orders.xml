@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<Orders>
+  <Order OrderID="ID-1" Key="0001">
+    <Event>
+      <EventName>Zdjęcia plenerowe do kalendarza</EventName>
+      <EventAddress>
+        <Comment>Park Błonie w Łowiczu</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łowicz</City>
+          <Zip>99-400</Zip>
+          <Address>Bratkowice 33/1</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-05-30T09:00:00</StartDate>
+      <EndDate>2017-05-30T12:00:00</EndDate>
+    </Event>
+    <Cost>
+      <FullCost>200</FullCost>
+      <Currency>PLN</Currency>
+      <Prepayment>50</Prepayment>
+      <Invoice>TAK</Invoice>
+    </Cost>
+    <Customer>
+      <CustomerName>
+        <FName>Paweł</FName>
+        <LName>Madej</LName>
+      </CustomerName>
+      <TelNo>516111123</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Lódzkie</State>
+        <City>Lowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Zduńska 33</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName>Kalendarze Lowicz</CompanyName>
+        <TaxNo>8361911231</TaxNo>
+      </Company>
+      <Mail>biuro@kalendarz.pl</Mail>
+    </Customer>
+    <Information> Zleceniem jest wykonanie zdjęćdla pierwszej strony kalendarza. </Information>
+  </Order>
+  <Order OrderID="ID-2" Key="0002">
+    <Event>
+      <EventName>Zdjęcia weselne w kościele</EventName>
+      <EventAddress>
+        <Comment>Katedra w Łowiczu</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łowicz</City>
+          <Zip>99-400</Zip>
+          <Address>Stary Rynek 24/30</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-24T14:00:00</StartDate>
+      <EndDate>2017-06-24T15:00:00</EndDate>
+    </Event>
+    <Cost>
+      <FullCost>400</FullCost>
+      <Currency>PLN</Currency>
+      <Prepayment>50</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer>
+      <CustomerName>
+        <FName>Joanna</FName>
+        <LName>Michalska</LName>
+      </CustomerName>
+      <TelNo>519486585</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Łódzka 125</Address>
+      </FullAddress>
+      <Mail>joannam@gmail.com</Mail>
+    </Customer>
+    <Information> Zleceniem jest wykonanie zdjęć podczas ślubu kościelnego. </Information>
+  </Order>
+  <Order OrderID="ID-3" Key="0003">
+    <Event>
+      <EventName>Sesja zdjęciowa</EventName>
+      <EventAddress>
+        <Comment>Park Arkadia</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Arkadia</City>
+          <Zip>99-435</Zip>
+          <Address>Arkadia</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-07-05T10:00:00</StartDate>
+      <EndDate>2017-07-05T16:00:00</EndDate>
+    </Event>
+    <Cost>
+      <FullCost>100</FullCost>
+      <Currency>PLN</Currency>
+      <Prepayment>50</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer>
+      <CustomerName>
+        <FName>Karolina</FName>
+        <LName>Michalska</LName>
+      </CustomerName>
+      <TelNo>726123558</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Bratkowice 36/15</Address>
+      </FullAddress>
+      <Mail>K.M@wp.pl</Mail>
+    </Customer>
+    <Information> Wykonanie portretu w parku. </Information>
+  </Order>
+  <Order OrderID="ID-4"  Key="0004">
+    <Event>
+      <EventName>Zdjęcia plenerowe dzienne</EventName>
+      <EventAddress>
+        <Comment>Park Arkadia</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Arkadia</City>
+          <Zip>99-435</Zip>
+          <Address>Arkadia</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-12T08:00:00</StartDate>
+      <EndDate>2017-06-12T14:00:00</EndDate>
+    </Event>
+    <Event>
+      <EventName>Zdjęcia plenerowe noccne</EventName>
+      <EventAddress>
+        <Comment>Park Arkadia</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Arkadia</City>
+          <Zip>99-435</Zip>
+          <Address>Arkadia</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-12T22:00:00</StartDate>
+      <EndDate>2017-06-13T06:00:00</EndDate>
+    </Event>
+    <Cost>
+      <FullCost>200</FullCost>
+      <Currency>USD</Currency>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer>
+      <CustomerName>
+        <FName>Karolina</FName>
+        <LName>Michalska</LName>
+      </CustomerName>
+      <TelNo>468377796</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Reymonta 35</Address>
+      </FullAddress>
+      <Mail>biuro@firma.reklamowa.com.pl</Mail>
+    </Customer>
+    <Information> Sesja plenerowe. </Information>
+  </Order>
+  <Order OrderID="ID-5" Key="0005">
+    <Event>
+      <EventName>Zdjęcia z wieczoru panieńskiego</EventName>
+      <EventAddress>
+        <Comment>Klub Kaliska</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łódź</City>
+          <Zip>90-004</Zip>
+          <Address>Piotrkowska 102</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-04-29T20:00:00</StartDate>
+      <EndDate>2017-04-29T04:00:00</EndDate>
+    </Event>
+    <Cost>
+      <FullCost>150</FullCost>
+      <Currency>EURO</Currency>
+      <Prepayment>150</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer>
+      <CustomerName>
+        <FName>Michalina</FName>
+        <LName>Grzegory</LName>
+      </CustomerName>
+      <TelNo>500126565</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Reymonta 35</Address>
+      </FullAddress>
+      <Mail>biuro@firma.reklamowa.com.pl</Mail>
+    </Customer>
+  </Order>
+  <Order OrderID="ID-6" Key="0006">
+    <Event>
+      <EventName>Sesja ślubna</EventName>
+      <EventAddress>
+        <Comment>Park Arkadia</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Arkadia</City>
+          <Zip>99-435</Zip>
+          <Address>Arkadia</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-12T22:00:00</StartDate>
+      <EndDate>2017-06-13T06:00:00</EndDate>
+    </Event>
+    <Cost>
+      <FullCost>200</FullCost>
+      <Currency>USD</Currency>
+      <Prepayment>0</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer>
+      <CustomerName>
+        <FName>Tomasz</FName>
+        <LName>Kwasiborski</LName>
+      </CustomerName>
+      <TelNo>792545589</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Broniewskiego 5</Address>
+      </FullAddress>
+      <Mail>tomasz@tomasz.pl</Mail>
+    </Customer>
+    <Customer>
+      <CustomerName>
+        <FName>Anna</FName>
+        <LName>Łabendowicz</LName>
+      </CustomerName>
+      <TelNo>512258741</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Broniewskiego 7</Address>
+      </FullAddress>
+      <Mail>anna@wp.pl</Mail>
+    </Customer>
+    <Information> Sesja plenerowe. </Information>
+  </Order>
+  <Order OrderID="ID-7" Key="0007">
+    <Event>
+      <EventName>Zdjęcia u Pana Młodego</EventName>
+      <EventAddress>
+        <Comment>Dom Pana Młodego</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Mazowieckie</State>
+          <City>Raciąż</City>
+          <Zip>09-140</Zip>
+          <Address>Łempino 8</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-12T08:00:00</StartDate>
+      <EndDate>2017-06-12T09:00:00</EndDate>
+    </Event>
+    <Event>
+      <EventName>Zdjęcia u Pani Młodej</EventName>
+      <EventAddress>
+        <Comment>Dom Pani Młodej</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łowicz</City>
+          <Zip>99-400</Zip>
+          <Address>Dąbrowskiego 4/4</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-12T11:00:00</StartDate>
+      <EndDate>2017-06-12T12:00:00</EndDate>
+    </Event>
+    <Event>
+      <EventName>Zdjęcia podczas ślubu</EventName>
+      <EventAddress>
+        <Comment>Kościół Ducha Świętego</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łowicz</City>
+          <Zip>99-400</Zip>
+          <Address>Długa 15</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-12T13:00:00</StartDate>
+      <EndDate>2017-06-12T14:00:00</EndDate>
+    </Event>
+    <Event>
+      <EventName>Zdjęcia podczas przyjęcia weselnego</EventName>
+      <EventAddress>
+        <Comment>OSP Nieborów</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Nieborów</City>
+          <Zip>99-412</Zip>
+          <Address>Nieborów 147</Address>
+        </FullAddress>
+      </EventAddress>
+      <StartDate>2017-06-12T15:00:00</StartDate>
+      <EndDate>2017-06-13T04:00:00</EndDate>
+    </Event>
+    <Cost>
+      <FullCost>1200</FullCost>
+      <Currency>PLN</Currency>
+      <Prepayment>200</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer>
+      <CustomerName>
+        <FName>Tomasz</FName>
+        <LName>Kwasiborski</LName>
+      </CustomerName>
+      <TelNo>622545589</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Mazowieckie</State>
+        <City>Raciąż</City>
+        <Zip>09-140</Zip>
+        <Address>Łempino 8</Address>
+      </FullAddress>
+      <Mail>tomasz.k@onet.pl</Mail>
+    </Customer>
+    <Customer>
+      <CustomerName>
+        <FName>Anna</FName>
+        <LName>Łabendowicz</LName>
+      </CustomerName>
+      <TelNo>512258741</TelNo>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Dąbrowskiego 4/4</Address>
+      </FullAddress>
+      <Mail>annaAniaAnna@wp.pl</Mail>
+    </Customer>
+    <Information> Zdjęcia ślubne z dojazdem do domu Państwa Młodych i podczas Ślubu oraz Wesela. </Information>
+  </Order>
+</Orders>

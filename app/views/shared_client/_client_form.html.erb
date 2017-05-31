@@ -1,0 +1,46 @@
+<div class="container">
+  <form action="/apply/" class="" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset class="form-group"><label>Wybierz pakiet, którym jesteś zainteresowany:</label>
+          <div class="radio"><label><input value="option1" name="package" type="radio">Podstawowa sesja</label></div>
+          <div class="radio"><label><input value="option2" name="package" type="radio" checked="" >Pakiet podstawowy</label></div>
+          <div class="radio"><label><input value="option2" name="package" type="radio">Pakiet rozszerzony</label></div>
+        </fieldset>
+        <div class="form-group"><label for="exampleTextarea">
+          Będziemy kontaktować się z Tobą telefonicznie w celu ustalenia szczegółów sesji,
+          możesz jednak podać w formularzu informację wg Ciebie istotne:
+        </label><textarea class="form-control" name="comment" id="exampleTextarea" rows="3"></textarea></div>
+      </div>
+      <div class="col-md-6">
+        <fieldset class="form-group">
+          <div class="input-group"><span class="input-group-addon" id="basic-addon1">Imie nazwisko:</span>
+            <input class="form-control" name="name" placeholder="" aria-describedby="basic-addon1" type="text"></div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="input-group"><span class="input-group-addon" id="basic-addon1">Mail:</span>
+            <input class="form-control" name="mail" placeholder="" aria-describedby="basic-addon1" type="text"></div>
+          <div class="input-group"><span class="input-group-addon" id="basic-addon1">Telefon:</span>
+            <input class="form-control" name="phone" placeholder="" aria-describedby="basic-addon1" type="text"></div>
+        </fieldset>
+        <div>
+          <div class="form-group">
+            <div class='input-group date' id='datetimepicker2'>
+              <input type='text' name="date" class="form-control"/>
+              <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+        <button type="submit" class="btn btn-primary">Wyslij</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+<%= render :partial => "shared_client/client_navbar" %>
+
+<div class="py-5">
+  <div class="container">
+    <% if @message.bool_is_good == true %>
+    <div class="bg-success text-white">
+      <p>
+        Dziękujemy za wysłanie zgłoszenia, zapisz ten klucz: <strong><%= @message.key %></strong>.<br/>
+        Za pomocą tego klucza, oraz zgłoszonego numeru telefonu <strong><%= @message.phone %></strong>,<br/>
+        będziesz mógł podejrzeć swoje zamówienie.<br/>
+        W celu ustalenia szczegółów wizyty, będziemy się kontaktować telefonicznie.
+      </p>
+    </div>
+        <%
+          else
+        %>
+        <div class="bg-danger text-white">
+          <p>
+            Podałeś błędny nr telefonu, poprawne formaty dla telefonu: <br/>
+            000000000<br/>
+            (00) 000-000-000<br/>
+            (00) 00-000-000<br/>
+            Popraw zgłoszenie w formularzu, abyśmy mogli się z Tobą skontaktować.
+          </p>
+        </div>
+        <%
+        end
+        %>
+  </div>
+</div>
+
+<%= render :partial => "shared_client/client_price" %>
+<%= render :partial => "shared_client/client_form" %>
+<%= render :partial => "shared_client/client_ad" %>
+<%= render :partial => "shared/import_scr" %>
