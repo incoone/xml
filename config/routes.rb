@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post '/admin/:id/eventDel/', to: 'admin#eventDel'
   post '/admin/:id/customer/', to: 'admin#customer'
   post '/admin/:id/customerDel/', to: 'admin#customerDel'
+  post '/admin/:id/eventAdd/', to: 'admin#eventAdd'
+
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

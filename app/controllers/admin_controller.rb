@@ -80,6 +80,47 @@ class AdminController < ApplicationController
     File.write(orders, doc)
   end
 
+  def eventAdd
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+    doc.to_xml
+
+    order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
+
+    event = Nokogiri::XML::Node.new("Event", doc)
+    event['uuid'] = '8859385943789'
+
+    event << Nokogiri::XML::Node.new("EventName", doc).content = params[:EventName]
+
+    event << Nokogiri::XML::Node.new("StartDate", doc).content = params[:StartDate]
+
+    event << Nokogiri::XML::Node.new("EndDate", doc).content = params[:EndDate]
+
+    eventAddress = Nokogiri::XML::Node.new("EventAddress", doc)
+
+    eventAddress << Nokogiri::XML::Node.new("Comment", doc).content = params[:EComment]
+
+    fullAddress = Nokogiri::XML::Node.new("FullAddress", doc)
+
+    fullAddress << Nokogiri::XML::Node.new("Country", doc).content = params[:EFCountry]
+
+    fullAddress << Nokogiri::XML::Node.new("State", doc).content = params[:EFState]
+
+    fullAddress << Nokogiri::XML::Node.new("City", doc).content = params[:EFCity]
+
+    fullAddress << Nokogiri::XML::Node.new("Address", doc).content = params[:EFAddress]
+
+    fullAddress << Nokogiri::XML::Node.new("Zip", doc).content = params[:EFZip]
+
+    eventAddress << fullAddress
+    event << eventAddress
+    order.add_child(event)
+    # new_entry.add_child(para.to_xml + "\n")
+    #doc.root.add_child(event.to_xml + "\n")
+    #doc = doc.to_xml
+    File.write(orders, doc)
+  end
+
   def eventDel
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
     doc = Nokogiri::XML(File.read(orders))
