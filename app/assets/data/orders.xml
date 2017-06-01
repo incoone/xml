@@ -17,9 +17,8 @@
       <StartDate>2017-05-30T09:00:00</StartDate>
       <EndDate>2017-05-30T12:00:00</EndDate>
     </Event>
-    <Cost>
+    <Cost Currency="PLN">
       <FullCost>200</FullCost>
-      <Currency>PLN</Currency>
       <Prepayment>50</Prepayment>
       <Invoice>TAK</Invoice>
     </Cost>
@@ -60,9 +59,8 @@
       <StartDate>2017-06-24T14:00:00</StartDate>
       <EndDate>2017-06-24T15:00:00</EndDate>
     </Event>
-    <Cost>
+    <Cost Currency="PLN">
       <FullCost>400</FullCost>
-      <Currency>PLN</Currency>
       <Prepayment>50</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
@@ -99,9 +97,8 @@
       <StartDate>2017-07-05T10:00:00</StartDate>
       <EndDate>2017-07-05T16:00:00</EndDate>
     </Event>
-    <Cost>
+    <Cost Currency="PLN">
       <FullCost>100</FullCost>
-      <Currency>PLN</Currency>
       <Prepayment>50</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
@@ -153,9 +150,8 @@
       <StartDate>2017-06-12T22:00:00</StartDate>
       <EndDate>2017-06-13T06:00:00</EndDate>
     </Event>
-    <Cost>
+    <Cost Currency="EURO">
       <FullCost>200</FullCost>
-      <Currency>USD</Currency>
       <Invoice>NIE</Invoice>
     </Cost>
     <Customer uuid="17d734ed-4a17-4cb4-a96d-0f1d9ae32fa8">
@@ -191,9 +187,8 @@
       <StartDate>2017-04-29T20:00:00</StartDate>
       <EndDate>2017-04-29T04:00:00</EndDate>
     </Event>
-    <Cost>
+    <Cost Currency="EURO">
       <FullCost>150</FullCost>
-      <Currency>EURO</Currency>
       <Prepayment>150</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
@@ -229,9 +224,8 @@
       <StartDate>2017-06-12T22:00:00</StartDate>
       <EndDate>2017-06-13T06:00:00</EndDate>
     </Event>
-    <Cost>
+    <Cost Currency="USD">
       <FullCost>200</FullCost>
-      <Currency>USD</Currency>
       <Prepayment>0</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
@@ -328,9 +322,8 @@
       <StartDate>2017-06-12T15:00:00</StartDate>
       <EndDate>2017-06-13T04:00:00</EndDate>
     </Event>
-    <Cost>
+    <Cost Currency="PLN">
       <FullCost>1200</FullCost>
-      <Currency>PLN</Currency>
       <Prepayment>200</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
