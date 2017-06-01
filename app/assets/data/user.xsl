@@ -65,6 +65,33 @@
     <!--</div>-->
     <!--</div>-->
   </xsl:template>
+
+  <xsl:template match="Customer">
+    <!-- <div class="row">-->
+    <!--<div class="col-md-6">-->
+    <div class="card home">
+      <div class="card-block">
+        <h4 class="card-title"><xsl:value-of select="CustomerName/FName"/> <xsl:value-of select="CustomerName/LName"/></h4>
+        <h6 class="card-subtitle text-muted">
+          <xsl:value-of select="TelNo"/>
+        </h6>
+        <h6 class="card-subtitle text-muted">
+          <xsl:value-of select="Mail"/>
+        </h6>
+        <p class="card-text p-y-1">
+          <xsl:value-of select="FullAddress/Country"/><br/>
+          <xsl:value-of select="FullAddress/State"/><br/>
+          <xsl:value-of select="FullAddress/City"/><br/>
+          <xsl:value-of select="FullAddress/Zip"/><br/>
+          <xsl:value-of select="FullAddress/Address"/><br/>
+        </p>
+    <!--<a href="#" class="card-link">link</a>-->
+    <!--<a href="#" class="card-link">Second link</a>-->
+    </div>
+  </div>
+<!--</div>-->
+    <!--</div>-->
+  </xsl:template>
 </xsl:stylesheet>
 
 
