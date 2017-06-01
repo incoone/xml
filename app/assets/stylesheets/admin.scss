@@ -1,3 +1,41 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.row.form-admin {
+  padding: 2px;
+}
+
+.form.form-admin {
+  max-width:1100px;
+  margin: auto;
+}
+
+.input-group.max {
+  max-width:1100px;
+  margin: auto;
+}
+
+.btn.r {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.right {
+  float: right;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
+.container.home {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card.admin
+{
+  width: 500px;
+}

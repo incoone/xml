@@ -2,7 +2,7 @@
 
 <Orders>
   <Order OrderID="ID-1" Key="0001">
-    <Event>
+    <Event uuid="4f998977-e8c7-47c4-9c04-df23920a338e">
       <EventName>Zdjęcia plenerowe do kalendarza</EventName>
       <EventAddress>
         <Comment>Park Błonie w Łowiczu</Comment>
@@ -23,7 +23,7 @@
       <Prepayment>50</Prepayment>
       <Invoice>TAK</Invoice>
     </Cost>
-    <Customer>
+    <Customer uuid="4f998977-e8c7-47c4-9c04-df23920a898e">
       <CustomerName>
         <FName>Paweł</FName>
         <LName>Madej</LName>
@@ -45,7 +45,7 @@
     <Information> Zleceniem jest wykonanie zdjęćdla pierwszej strony kalendarza. </Information>
   </Order>
   <Order OrderID="ID-2" Key="0002">
-    <Event>
+    <Event uuid="46cb4f55-c773-455b-9410-b08f9cd6a135">
       <EventName>Zdjęcia weselne w kościele</EventName>
       <EventAddress>
         <Comment>Katedra w Łowiczu</Comment>
@@ -66,7 +66,7 @@
       <Prepayment>50</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
-    <Customer>
+    <Customer uuid="061c4991-e817-4fcc-b2f1-848d448c79cc">
       <CustomerName>
         <FName>Joanna</FName>
         <LName>Michalska</LName>
@@ -84,7 +84,7 @@
     <Information> Zleceniem jest wykonanie zdjęć podczas ślubu kościelnego. </Information>
   </Order>
   <Order OrderID="ID-3" Key="0003">
-    <Event>
+    <Event uuid="1fd251eb-b7b5-4456-a40d-2d735c891c4e">
       <EventName>Sesja zdjęciowa</EventName>
       <EventAddress>
         <Comment>Park Arkadia</Comment>
@@ -105,7 +105,7 @@
       <Prepayment>50</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
-    <Customer>
+    <Customer uuid="8769bb69-36ce-4bfb-b4b5-f8f492576b95">
       <CustomerName>
         <FName>Karolina</FName>
         <LName>Michalska</LName>
@@ -123,7 +123,7 @@
     <Information> Wykonanie portretu w parku. </Information>
   </Order>
   <Order OrderID="ID-4"  Key="0004">
-    <Event>
+    <Event uuid="26d4de41-6f67-49cc-9c3d-c287a429b3ac">
       <EventName>Zdjęcia plenerowe dzienne</EventName>
       <EventAddress>
         <Comment>Park Arkadia</Comment>
@@ -138,7 +138,7 @@
       <StartDate>2017-06-12T08:00:00</StartDate>
       <EndDate>2017-06-12T14:00:00</EndDate>
     </Event>
-    <Event>
+    <Event uuid="cb0b79d4-cefb-4514-a0eb-dfadd4b5877f">
       <EventName>Zdjęcia plenerowe noccne</EventName>
       <EventAddress>
         <Comment>Park Arkadia</Comment>
@@ -158,7 +158,7 @@
       <Currency>USD</Currency>
       <Invoice>NIE</Invoice>
     </Cost>
-    <Customer>
+    <Customer uuid="17d734ed-4a17-4cb4-a96d-0f1d9ae32fa8">
       <CustomerName>
         <FName>Karolina</FName>
         <LName>Michalska</LName>
@@ -176,7 +176,7 @@
     <Information> Sesja plenerowe. </Information>
   </Order>
   <Order OrderID="ID-5" Key="0005">
-    <Event>
+    <Event uuid="eda3fcbf-65bf-4746-a9d5-f77816ab7134">
       <EventName>Zdjęcia z wieczoru panieńskiego</EventName>
       <EventAddress>
         <Comment>Klub Kaliska</Comment>
@@ -197,7 +197,7 @@
       <Prepayment>150</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
-    <Customer>
+    <Customer uuid="ad56e3e6-0766-4aef-9a84-3ebb649b42ba">
       <CustomerName>
         <FName>Michalina</FName>
         <LName>Grzegory</LName>
@@ -214,7 +214,7 @@
     </Customer>
   </Order>
   <Order OrderID="ID-6" Key="0006">
-    <Event>
+    <Event uuid="f8e53581-dc62-4760-a4c9-588fac83bc9d">
       <EventName>Sesja ślubna</EventName>
       <EventAddress>
         <Comment>Park Arkadia</Comment>
@@ -235,7 +235,7 @@
       <Prepayment>0</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
-    <Customer>
+    <Customer uuid="61b3cc2b-3a7a-4deb-af82-51f5aef34a7c">
       <CustomerName>
         <FName>Tomasz</FName>
         <LName>Kwasiborski</LName>
@@ -250,7 +250,7 @@
       </FullAddress>
       <Mail>tomasz@tomasz.pl</Mail>
     </Customer>
-    <Customer>
+    <Customer uuid="adb5d9e6-41f3-4ab8-8ea8-79f007f08ed2">
       <CustomerName>
         <FName>Anna</FName>
         <LName>Łabendowicz</LName>
@@ -268,7 +268,7 @@
     <Information> Sesja plenerowe. </Information>
   </Order>
   <Order OrderID="ID-7" Key="0007">
-    <Event>
+    <Event uuid="df4e12f8-6554-4ac1-8e87-5deb21192be2">
       <EventName>Zdjęcia u Pana Młodego</EventName>
       <EventAddress>
         <Comment>Dom Pana Młodego</Comment>
@@ -283,7 +283,7 @@
       <StartDate>2017-06-12T08:00:00</StartDate>
       <EndDate>2017-06-12T09:00:00</EndDate>
     </Event>
-    <Event>
+    <Event uuid="e334eafd-3337-4714-9eaa-677881424ab5">
       <EventName>Zdjęcia u Pani Młodej</EventName>
       <EventAddress>
         <Comment>Dom Pani Młodej</Comment>
@@ -298,7 +298,7 @@
       <StartDate>2017-06-12T11:00:00</StartDate>
       <EndDate>2017-06-12T12:00:00</EndDate>
     </Event>
-    <Event>
+    <Event uuid="33d5edc2-f77b-41eb-aeda-8a29c2cdd206">
       <EventName>Zdjęcia podczas ślubu</EventName>
       <EventAddress>
         <Comment>Kościół Ducha Świętego</Comment>
@@ -313,7 +313,7 @@
       <StartDate>2017-06-12T13:00:00</StartDate>
       <EndDate>2017-06-12T14:00:00</EndDate>
     </Event>
-    <Event>
+    <Event uuid="dddc880c-7278-45cf-904e-a897d2bf76ba">
       <EventName>Zdjęcia podczas przyjęcia weselnego</EventName>
       <EventAddress>
         <Comment>OSP Nieborów</Comment>
@@ -334,7 +334,7 @@
       <Prepayment>200</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
-    <Customer>
+    <Customer uuid="035629db-a5ee-4790-93ae-82536c5a65a7">
       <CustomerName>
         <FName>Tomasz</FName>
         <LName>Kwasiborski</LName>
@@ -349,7 +349,7 @@
       </FullAddress>
       <Mail>tomasz.k@onet.pl</Mail>
     </Customer>
-    <Customer>
+    <Customer uuid="1126eeb3-1bac-4324-8189-9f58f2c25cde">
       <CustomerName>
         <FName>Anna</FName>
         <LName>Łabendowicz</LName>

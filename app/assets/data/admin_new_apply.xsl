@@ -16,7 +16,7 @@
       </ul>
     </div>
   </xsl:template>
-  
+
 <!-- <xsl:value-of select="$key"/> -->
   <xsl:template match="inquiry">
     <xsl:variable name="key" select="@Key"/>
