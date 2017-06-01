@@ -60,7 +60,6 @@
 
             </p>
             <a href="#" class="card-link">link</a>
-            <a href="#" class="card-link">Second link</a>
           </div>
         </div>
     <!--</div>-->
@@ -78,12 +77,15 @@
           <xsl:value-of select="CustomerName/LName"/>
         </h4>
         <p class="card-text p-y-1">
-          <xsl:value-of select="TelNo"/><br/>
-          <xsl:value-of select="Mail"/><br/>
-          <xsl:value-of select="FullAddress/Country"/><br/>
+          <xsl:text>Tel: </xsl:text><xsl:value-of select="TelNo"/><br/>
+          <xsl:text>Email: </xsl:text><xsl:value-of select="Mail"/><br/>
+          <xsl:value-of select="FullAddress/Country"/>
+          <xsl:text>, województwo </xsl:text>
           <xsl:value-of select="FullAddress/State"/><br/>
-          <xsl:value-of select="FullAddress/City"/><br/>
+          <xsl:value-of select="FullAddress/City"/>
+          <xsl:text> </xsl:text>
           <xsl:value-of select="FullAddress/Zip"/><br/>
+          <xsl:text> </xsl:text>
           <xsl:value-of select="FullAddress/Address"/><br/>
         </p>
     <!--<a href="#" class="card-link">link</a>-->
