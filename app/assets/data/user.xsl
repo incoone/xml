@@ -40,6 +40,7 @@
   </xsl:template>
 
   <xsl:template match="Order">
+    <xsl:apply-templates select="Customer"/>
     <xsl:apply-templates select="Event"/>
   </xsl:template>
 
