@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/admin/', to: 'admin#index'
   get '/admin/:id', to: 'admin#id'
   post '/admin/:id/info/', to: 'admin#info'
+  post '/admin/:id/event/', to: 'admin#event'
+
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

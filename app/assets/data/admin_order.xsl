@@ -106,30 +106,32 @@
 
     <div class="card admin">
       <div class="card-block">
-        <input type="text" class="form-control form-control-sm" value="{EventName}"/>
-        <!--<h6 class="card-subtitle text-muted">-->
-        <div class="input-group max">
-          od:
-          <input type="text" class="col-6 form-control form-control-sm" value="{StartDate}"/>
-          do:
-          <input type="text" class="col-6 form-control form-control-sm" value="{EndDate}"/>
-        </div>
-        <!--</h6>-->
+        <form action="/admin/{$key}/event/" method="post">
+          <input type="text" class="form-control form-control-sm" value="{EventName}"/>
+          <!--<h6 class="card-subtitle text-muted">-->
+          <div class="input-group max">
+            od:
+            <input type="text" class="col-6 form-control form-control-sm" value="{StartDate}"/>
+            do:
+            <input type="text" class="col-6 form-control form-control-sm" value="{EndDate}"/>
+          </div>
+          <!--</h6>-->
 
-        <input type="text" class="form-control form-control-sm" value="{EventAddress/Comment}"/>
-        <input type="text" class="form-control form-control-sm" value="{EventAddress/FullAddress/Address}"/>
-        <div class="input-group max">
+          <input type="text" class="form-control form-control-sm" value="{EventAddress/Comment}"/>
+          <input type="text" class="form-control form-control-sm" value="{EventAddress/FullAddress/Address}"/>
+          <div class="input-group max">
 
-          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Zip}"/>
+            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Zip}"/>
 
-          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/City}"/>
-          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/State}"/>
+            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/City}"/>
+            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/State}"/>
 
-          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Country}"/>
-        </div>
-        <br/>
+            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Country}"/>
+          </div>
+          <br/>
 
-        <button type="submit" class="btn btn-primary btn-sm pull-right">Zaktualizuj</button>
+          <button type="submit" class="btn btn-primary btn-sm pull-right">Zaktualizuj</button>
+        </form>
       </div>
     </div>
 
