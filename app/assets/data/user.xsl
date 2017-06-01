@@ -72,7 +72,11 @@
     <!--<div class="col-md-6">-->
     <div class="card home">
       <div class="card-block">
-        <h4 class="card-title"><xsl:value-of select="CustomerName/FName"/><xsl:value-of select="CustomerName/LName"/></h4>
+        <h4 class="card-title">
+          <xsl:value-of select="CustomerName/FName"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="CustomerName/LName"/>
+        </h4>
         <p class="card-text p-y-1">
           <xsl:value-of select="TelNo"/><br/>
           <xsl:value-of select="Mail"/><br/>
