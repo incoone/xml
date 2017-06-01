@@ -98,9 +98,54 @@
     <hr/>
     <div class="container home">
       <xsl:apply-templates select="Event"/>
+      <hr/><br/>
+      <xsl:apply-templates select="Customer"/>
     </div>
-
   </xsl:template>
+
+  <xsl:template match="Customer">
+    <div class="card admin">
+      <div class="card-block">
+        <form action="/admin/{$key}/customer/" method="post">
+          <input name="uuid" value="{@uuid}" type="hidden"/>
+          <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+        <div class="input-group max">
+          <input name="FName" type="text" class="col-6 form-control form-control-sm" value="{CustomerName/FName}" placeholder="imie"/>
+          <input name="LName" type="text" class="col-6 form-control form-control-sm" value="{CustomerName/LName}" placeholder="nazwisko"/>
+        </div>
+        <div class="input-group max">
+          <input name="CompanyName" type="text" class="col-8 form-control form-control-sm" value="{Company/CompanyName}" placeholder="firma"/>
+          <input name="TaxNo" type="text" class="col-4 form-control form-control-sm" value="{Company/TaxNo}" placeholder="NIP"/>
+        </div>
+        <hr/>
+        <input name="Address" type="text" class="form-control form-control-sm" value="{FullAddress/Address}" placeholder="ulica"/>
+        <div class="input-group max">
+          <input name="Zip" type="text" class="col-4 form-control form-control-sm" value="{FullAddress/Zip}" placeholder="ZIP"/>
+          <input name="City" type="text" class="col-4 form-control form-control-sm" value="{FullAddress/City}" placeholder="miasto"/>
+        </div>
+        <div class="input-group max">
+          <input name="State" type="text" class="col-4 form-control form-control-sm" value="{FullAddress/State}" placeholder="województwo"/>
+          <input name="Country" type="text" class="col-4 form-control form-control-sm" value="{FullAddress/Country}" placeholder="państwo"/>
+        </div>
+        <hr/>
+        <div class="input-group max">
+          <input name="TelNo" type="text" class="col-8 form-control form-control-sm" value="{TelNo}" placeholder="telefon"/>
+          <input name="Mail" type="text" class="col-4 form-control form-control-sm" value="{Mail}" placeholder="mail"/>
+        </div>
+
+        <hr/>
+        <button type="submit" class="btn btn-primary pull-right">Zaktualizuj</button>
+      </form>
+      <form action="/admin/{$key}/customerDel/" method="post">
+        <input name="uuid" value="{@uuid}" type="hidden"/>
+        <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+        <button type="submit" class="btn btn-danger btn-sm">USUŃ</button>
+      </form>
+
+      </div>
+    </div>
+  </xsl:template>
+
 
   <xsl:template match="Event">
 
@@ -111,12 +156,14 @@
           <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
           <input name="EventName" type="text" class="form-control form-control-sm" value="{EventName}"/>
           <!--<h6 class="card-subtitle text-muted">-->
+          <hr/>
           <div class="input-group max">
             od:
             <input name="StartDate" type="text" class="col-6 form-control form-control-sm" value="{StartDate}"/>
             do:
             <input name="EndDate" type="text" class="col-6 form-control form-control-sm" value="{EndDate}"/>
           </div>
+          <hr/>
           <!--</h6>-->
 
           <input name="EComment" type="text" class="form-control form-control-sm" value="{EventAddress/Comment}"/>
@@ -132,7 +179,12 @@
           </div>
           <br/>
 
-          <button type="submit" class="btn btn-primary btn-sm pull-right">Zaktualizuj</button>
+          <button type="submit" class="btn btn-primary pull-right">Zaktualizuj</button>
+        </form>
+        <form action="/admin/{$key}/eventDel/" method="post">
+          <input name="uuid" value="{@uuid}" type="hidden"/>
+          <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+          <button type="submit" class="btn btn-danger btn-sm">USUŃ</button>
         </form>
       </div>
     </div>

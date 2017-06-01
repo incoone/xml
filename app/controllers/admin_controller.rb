@@ -47,14 +47,55 @@ class AdminController < ApplicationController
     doc = Nokogiri::XML(File.read(orders))
     propEvent = doc.xpath("//Event[@uuid='" + params[:uuid] + "']")[0]
 
-    pEventName = propEvent.xpath("EventName")[0]
-    pEventName.content = params[:EventName]
-
+    propEvent.xpath("EventName")[0].content = params[:EventName]
     propEvent.xpath("EventAddress/Comment")[0].content = params[:EComment]
+    propEvent.xpath("EventAddress/FullAddress/Country")[0].content = params[:EFCountry]
+    propEvent.xpath("EventAddress/FullAddress/State")[0].content = params[:EFState]
+    propEvent.xpath("EventAddress/FullAddress/City")[0].content = params[:EFCity]
+    propEvent.xpath("EventAddress/FullAddress/Zip")[0].content = params[:EFZip]
+    propEvent.xpath("EventAddress/FullAddress/Address")[0].content = params[:EFAddress]
+    propEvent.xpath("EventAddress/Comment")[0].content = params[:EComment]
+    propEvent.xpath("StartDate")[0].content = params[:StartDate]
+    propEvent.xpath("EndDate")[0].content = params[:EndDate]
     doc = doc.to_xml
     File.write(orders, doc)
+  end
 
+  def customer
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+    propCustomer = doc.xpath("//Customer[@uuid='" + params[:uuid] + "']")[0]
+    propCustomer.xpath("CustomerName/FName")[0].content = params[:FName]
+    propCustomer.xpath("CustomerName/LName")[0].content = params[:LName]
+    propCustomer.xpath("Company/CompanyName")[0].content = params[:CompanyName]
+    propCustomer.xpath("Company/TaxNo")[0].content = params[:TaxNo]
+    propCustomer.xpath("FullAddress/Address")[0].content = params[:Address]
+    propCustomer.xpath("FullAddress/Zip")[0].content = params[:Zip]
+    propCustomer.xpath("FullAddress/City")[0].content = params[:City]
+    propCustomer.xpath("FullAddress/State")[0].content = params[:State]
+    propCustomer.xpath("FullAddress/Country")[0].content = params[:Country]
+    propCustomer.xpath("TelNo")[0].content = params[:TelNo]
+    propCustomer.xpath("Mail")[0].content = params[:Mail]
+    doc = doc.to_xml
+    File.write(orders, doc)
+  end
 
+  def eventDel
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+    doc.xpath("//Event[@uuid='" + params[:uuid] + "']")[0].remove
+    doc = doc.to_xml
+    File.write(orders, doc)
+    redirect_back(fallback_location: root_path)
+  end
+
+  def customerDel
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+    doc.xpath("//Customer[@uuid='" + params[:uuid] + "']")[0].remove
+    doc = doc.to_xml
+    File.write(orders, doc)
+    redirect_back(fallback_location: root_path)
   end
 
 end
