@@ -60,9 +60,11 @@
 
   <xsl:template match="Order">
 
-    <form class="form form-admin">
+    <form action="/admin/{$key}/info/" method="post" class="form form-admin">
+      <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+
       <div class="input-group max">
-        <input type="text" class="form-control form-control-sm" value="{Information}"/>
+        <input name="information" type="text" class="form-control form-control-sm" value="{Information}"/>
         <button type="submit" class="btn btn-primary btn-sm ">Zaktualizuj</button>
       </div>
     </form>
@@ -74,7 +76,8 @@
             <input type="checkbox" aria-label="faktura?"/>
           </span>
           <span class="input-group-addon input-group-addon-sm">kwota za całość:</span>
-          <input type="text" class="form-control form-control-sm" aria-label="Text input with checkbox"/>
+          <input type="text" class="form-control form-control-sm" value="{Cost/FullCost}"
+                 aria-label="Text input with checkbox"/>
           <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
             <option value="PLN" selected="selected">PLN</option>
             <option value="USD">USD</option>
@@ -85,7 +88,7 @@
       <div class="col-lg-4">
         <div class="input-group">
           <span class="input-group-addon">zapłacono:</span>
-          <input type="text" class="form-control" aria-label="Text input with radio button"/>
+          <input type="text" class="form-control" value="{Cost/Prepayment}" aria-label="Text input with radio button"/>
         </div>
       </div>
       <div class="col-lg-2">
@@ -100,26 +103,36 @@
   </xsl:template>
 
   <xsl:template match="Event">
-    <!-- <div class="row">-->
-    <!--<div class="col-md-6">-->
+
     <div class="card admin">
       <div class="card-block">
-        <h4 class="card-title"><xsl:value-of select="EventName"/></h4>
-        <h6 class="card-subtitle text-muted">
-          <xsl:value-of select="StartDate"/> - <xsl:value-of select="EndDate"/>
-        </h6>
-        <p class="card-text p-y-1">
-          <xsl:value-of select="EventAddress/Comment"/><br/>
-          <xsl:value-of select="EventAddress/FullAddress/Address"/>,
-          <xsl:value-of select="EventAddress/FullAddress/City"/>
+        <input type="text" class="form-control form-control-sm" value="{EventName}"/>
+        <!--<h6 class="card-subtitle text-muted">-->
+        <div class="input-group max">
+          od:
+          <input type="text" class="col-6 form-control form-control-sm" value="{StartDate}"/>
+          do:
+          <input type="text" class="col-6 form-control form-control-sm" value="{EndDate}"/>
+        </div>
+        <!--</h6>-->
 
-        </p>
-        <a href="#" class="card-link">link</a>
-        <a href="#" class="card-link">Second link</a>
+        <input type="text" class="form-control form-control-sm" value="{EventAddress/Comment}"/>
+        <input type="text" class="form-control form-control-sm" value="{EventAddress/FullAddress/Address}"/>
+        <div class="input-group max">
+
+          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Zip}"/>
+
+          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/City}"/>
+          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/State}"/>
+
+          <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Country}"/>
+        </div>
+        <br/>
+
+        <button type="submit" class="btn btn-primary btn-sm pull-right">Zaktualizuj</button>
       </div>
     </div>
-    <!--</div>-->
-    <!--</div>-->
+
   </xsl:template>
 
 </xsl:stylesheet>

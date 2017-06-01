@@ -32,4 +32,23 @@ class AdminController < ApplicationController
     puts c.to_xml
     @out = xslt.transform(doc, ["key", params[:id]]) #, 'main_phone', params[:phone]])
   end
+
+  def info
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+    q = '//Order[@Key=' + params[:id] + ']/Information'
+    property = doc.xpath("//Order[@Key=0007]/Information")[0]
+    property.content = params[:information]
+    doc = doc.to_xml
+    File.write(orders, doc)
+  end
+
+  def event
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+
+    doc = doc.to_xml
+    File.write(orders, doc)
+  end
+
 end
