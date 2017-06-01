@@ -107,26 +107,28 @@
     <div class="card admin">
       <div class="card-block">
         <form action="/admin/{$key}/event/" method="post">
-          <input type="text" class="form-control form-control-sm" value="{EventName}"/>
+          <input name="uuid" value="{@uuid}" type="hidden"/>
+          <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+          <input name="EventName" type="text" class="form-control form-control-sm" value="{EventName}"/>
           <!--<h6 class="card-subtitle text-muted">-->
           <div class="input-group max">
             od:
-            <input type="text" class="col-6 form-control form-control-sm" value="{StartDate}"/>
+            <input name="StartDate" type="text" class="col-6 form-control form-control-sm" value="{StartDate}"/>
             do:
-            <input type="text" class="col-6 form-control form-control-sm" value="{EndDate}"/>
+            <input name="EndDate" type="text" class="col-6 form-control form-control-sm" value="{EndDate}"/>
           </div>
           <!--</h6>-->
 
-          <input type="text" class="form-control form-control-sm" value="{EventAddress/Comment}"/>
-          <input type="text" class="form-control form-control-sm" value="{EventAddress/FullAddress/Address}"/>
+          <input name="EComment" type="text" class="form-control form-control-sm" value="{EventAddress/Comment}"/>
+          <input name="EFAddress" type="text" class="form-control form-control-sm" value="{EventAddress/FullAddress/Address}"/>
           <div class="input-group max">
 
-            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Zip}"/>
+            <input name="EFZip" type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Zip}"/>
 
-            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/City}"/>
-            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/State}"/>
+            <input name="EFCity" type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/City}"/>
+            <input name="EFState" type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/State}"/>
 
-            <input type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Country}"/>
+            <input name="EFCountry" type="text" class="col-3 form-control form-control-sm" value="{EventAddress/FullAddress/Country}"/>
           </div>
           <br/>
 

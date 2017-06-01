@@ -36,8 +36,7 @@ class AdminController < ApplicationController
   def info
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
     doc = Nokogiri::XML(File.read(orders))
-    q = '//Order[@Key=' + params[:id] + ']/Information'
-    property = doc.xpath("//Order[@Key=0007]/Information")[0]
+    property = doc.xpath("//Order[@Key=" + params[:id] + "]/Information")[0]
     property.content = params[:information]
     doc = doc.to_xml
     File.write(orders, doc)
@@ -46,9 +45,16 @@ class AdminController < ApplicationController
   def event
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
     doc = Nokogiri::XML(File.read(orders))
+    propEvent = doc.xpath("//Event[@uuid='" + params[:uuid] + "']")[0]
 
+    pEventName = propEvent.xpath("EventName")[0]
+    pEventName.content = params[:EventName]
+
+    propEvent.xpath("EventAddress/Comment")[0].content = params[:EComment]
     doc = doc.to_xml
     File.write(orders, doc)
+
+
   end
 
 end
