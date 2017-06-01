@@ -41,6 +41,7 @@
 
   <xsl:template match="Order">
     <xsl:apply-templates select="Customer"/>
+    <xsl:apply-templates select="Cost"/>
     <xsl:apply-templates select="Event"/>
   </xsl:template>
 
@@ -75,6 +76,10 @@
           <xsl:text> </xsl:text>
           <xsl:value-of select="CustomerName/LName"/>
         </h4>
+        <h5 class="card-title">
+          <xsl:value-of select="Company/CompanyName"/><br/>
+          <xsl:value-of select="Company/TaxNo"/>
+        </h5>
         <p class="card-text p-y-1">
           <xsl:text>Tel: </xsl:text><xsl:value-of select="TelNo"/><br/>
           <xsl:text>Email: </xsl:text><xsl:value-of select="Mail"/><br/>
@@ -87,12 +92,30 @@
           <xsl:text> </xsl:text>
           <xsl:value-of select="FullAddress/Address"/><br/>
         </p>
-    <!--<a href="#" class="card-link">link</a>-->
-    <!--<a href="#" class="card-link">Second link</a>-->
     </div>
   </div>
 <!--</div>-->
     <!--</div>-->
+  </xsl:template>
+
+  <xsl:template match="Cost">
+    <div class="card home">
+      <div class="card-block">
+        <h5 class="card-title"><xsl:text>Opłaty: </xsl:text></h5>
+        <p class="card-text p-y-1">
+          <xsl:text>Cena: </xsl:text>
+          <xsl:value-of select="FullCost"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="@Currency"/>
+          <br/>
+          <xsl:text>Zaliczka: </xsl:text>
+          <xsl:value-of select="Prepayment"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="@Currency"/>
+          <br/>
+        </p>
+      </div>
+    </div>
   </xsl:template>
 </xsl:stylesheet>
 
