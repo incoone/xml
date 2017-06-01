@@ -59,7 +59,6 @@
               <xsl:value-of select="EventAddress/FullAddress/City"/>
 
             </p>
-            <a href="#" class="card-link">link</a>
           </div>
         </div>
     <!--</div>-->
