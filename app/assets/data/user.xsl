@@ -16,9 +16,11 @@
         <!-- <xsl:apply-templates select="//Order[@Key=$key]/Event" /> -->
         <xsl:apply-templates select="//Order[@Key=$key and Customer/TelNo=$main_phone]" />
 
-        <xsl:if test="count(//Order[@Key=$key and Customer/TelNo=$main_phone]/Event) &lt; 1">
+        <!--<xsl:if test="count(//Order[@Key=$key and Customer/TelNo=$main_phone]/Event) &lt; 1">-->
+          <xsl:if test="count(//Order[@Key=$key and Customer/TelNo=$main_phone]/Event) &lt; 1">
           <xsl:choose>
-            <xsl:when test="count(//inquiry[@Key=$key and phone=$main_phone]) &lt; 1">
+            <!--<xsl:when test="count(//inquiry[@Key=$key and phone=$main_phone]) &lt; 1">-->
+            <xsl:when test="not(//inquiry[contains(@Key, $key) and phone=$main_phone])">
               <div class="bg-danger text-white">
                 Pod wskazanym numerem telefonu oraz kluczu nie znaleźliśmy Twojego zgłoszenia.
               </div>
