@@ -9,9 +9,10 @@
 
   <xsl:template name="user_data" match="/">
     <div class="container">
-      <h4>Zgłoszenie od klienta:</h4>
-      <br/>
+      <h4>Zgłoszenie od klienta: <xsl:value-of select="$key"/></h4>
+      <!--      <xsl:apply-templates select="//inquiry[contains(@Key, 'WEBW')]"/> -->
       <xsl:apply-templates select="//inquiry[contains(@Key, $key)]"/>
+
       <h4>Ustalenia:</h4>
       <xsl:apply-templates select="//Order[@Key=$key]"/>
     </div>
@@ -21,7 +22,7 @@
       <div class="card admin">
         <div class="card-block">
           <form action="/admin/{$key}/eventAdd/" method="post">
-            <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+
             <input name="EventName" type="text" class="form-control form-control-sm" placeholder="nazwa eventu"/>
             <hr/>
             <div class="input-group max">
@@ -46,6 +47,7 @@
             <br/>
 
             <button type="submit" class="btn btn-success pull-right">Dodaj nową kartę eventu</button>
+            <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
           </form>
         </div>
       </div>

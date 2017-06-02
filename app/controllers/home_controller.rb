@@ -29,7 +29,7 @@ class HomeController < ApplicationController
     if !@message.valid?
       @message.bool_is_good = false
     else
-      key = (0...4).map {(65 + rand(26)).chr}.join
+      key = rand(1..100000) #(0...4).map {(65 + rand(26)).chr}.join
       inquiries = File.join(Rails.root, 'app', 'assets', 'data', 'Inquiries.xml')
       doc = Nokogiri::XML(File.read(inquiries))
       doc.to_xml

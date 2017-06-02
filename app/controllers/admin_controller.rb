@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:eventAdd, :customerAdd]
+
   def index
     @admin_index = AdminIndex.new
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
@@ -29,8 +31,8 @@ class AdminController < ApplicationController
     c = doc_inquiries.search('inquiries')
     doc.at('/descendant::Orders').add_child(c)
 
-    puts c.to_xml
-    @out = xslt.transform(doc, ["key", params[:id]]) #, 'main_phone', params[:phone]])
+    p = params[:id].to_s
+    @out = xslt.transform(doc, ['key', p]) #, 'main_phone', params[:phone]])
   end
 
   def info
@@ -86,6 +88,38 @@ class AdminController < ApplicationController
     doc.to_xml
 
     order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
+    if(order.nil?)
+      order = Nokogiri::XML::Node.new("Order", doc)
+      order['Key'] = params[:id]
+
+      information = Nokogiri::XML::Node.new("Information", doc)
+      order << information
+
+      cost = Nokogiri::XML::Node.new("Cost", doc)
+      cost['Currency'] = "PLN"
+
+      fullCost = Nokogiri::XML::Node.new("FullCost", doc)
+      cost << fullCost
+
+      prepayment = Nokogiri::XML::Node.new("Prepayment", doc)
+      cost << prepayment
+
+      invoice = Nokogiri::XML::Node.new("Invoice", doc)
+      cost << invoice
+
+      order << cost
+
+      o = doc.xpath("Orders")[0]
+      o.add_child(order.to_xml + "\n")
+      doc = doc.to_xml
+      File.write(orders, doc)
+
+      orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+      doc = Nokogiri::XML(File.read(orders))
+      doc.to_xml
+
+      order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
+    end
 
     event = Nokogiri::XML::Node.new("Event", doc)
     event['uuid'] = SecureRandom.uuid
@@ -147,8 +181,38 @@ class AdminController < ApplicationController
     doc.to_xml
 
     order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
+    if(order.nil?)
+      order = Nokogiri::XML::Node.new("Order", doc)
+      order['Key'] = params[:id]
 
-    customer = Nokogiri::XML::Node.new("Customer", doc)
+      information = Nokogiri::XML::Node.new("Information", doc)
+      order << information
+
+      cost = Nokogiri::XML::Node.new("Cost", doc)
+      cost['Currency'] = "PLN"
+
+      fullCost = Nokogiri::XML::Node.new("FullCost", doc)
+      cost << fullCost
+
+      prepayment = Nokogiri::XML::Node.new("Prepayment", doc)
+      cost << prepayment
+
+      invoice = Nokogiri::XML::Node.new("Invoice", doc)
+      cost << invoice
+
+      order << cost
+
+      o = doc.xpath("Orders")[0]
+      o.add_child(order.to_xml + "\n")
+      doc = doc.to_xml
+      File.write(orders, doc)
+      doc = Nokogiri::XML(File.read(orders))
+      doc.to_xml
+
+      order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
+    end
+
+    customer = Nokogiri::XML::Node.new"Customer", doc
     customer['uuid'] = SecureRandom.uuid
 
     customerName = Nokogiri::XML::Node.new("CustomerName", doc)
