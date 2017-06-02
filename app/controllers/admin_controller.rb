@@ -14,7 +14,6 @@ class AdminController < ApplicationController
     c = doc_inquiries.search('inquiries')
     doc.at('/descendant::Orders').add_child(c)
 
-    puts c.to_xml
     @admin_index.new_apply_html = xslt.transform(doc)
 
   end
@@ -33,6 +32,16 @@ class AdminController < ApplicationController
 
     p = params[:id].to_s
     @out = xslt.transform(doc, ['key', p]) #, 'main_phone', params[:phone]])
+  end
+
+  def orders
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    admin_show_orders = File.join(Rails.root, 'app', 'assets', 'data', 'admin_show_orders.xsl')
+
+    doc = Nokogiri::XML(File.read(orders))
+    xslt = Nokogiri::XSLT(File.read(admin_show_orders))
+
+    @out = xslt.transform(doc)
   end
 
   def info

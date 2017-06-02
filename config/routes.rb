@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/apply/', to: 'home#index'
 
   get '/admin/', to: 'admin#index'
+  get '/admin/orders', to: 'admin#orders'
+
   get '/admin/:id', to: 'admin#id'
   post '/admin/:id/info/', to: 'admin#info'
   post '/admin/:id/event/', to: 'admin#event'
@@ -17,6 +19,8 @@ Rails.application.routes.draw do
   post '/admin/:id/eventAdd/', to: 'admin#eventAdd'
   post '/admin/:id/customerAdd/', to: 'admin#customerAdd'
   post '/admin/:id/pay/', to: 'admin#pay'
+
+
 
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
