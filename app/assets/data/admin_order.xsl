@@ -8,7 +8,7 @@
   </xsl:variable>
 
   <xsl:template name="user_data" match="/">
-    
+
     <div class="container">
       <h4>Zgłoszenie od klienta:
         <xsl:value-of select="$key"/>
@@ -91,6 +91,8 @@
         </div>
       </div>
     </div>
+
+
   </xsl:template>
 
   <xsl:template match="inquiry">
