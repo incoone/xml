@@ -24,4 +24,12 @@
     <comment/>
     <package>option2</package>
   </inquiry>
+  <inquiry Key="WEBW">
+    <mail>michał@onet.pl</mail>
+    <name>Michał Bratosik</name>
+    <phone>795458789</phone>
+    <date/>
+    <comment>Zdjęcia podczas imprezy firmowej.</comment>
+    <package>option2</package>
+  </inquiry>
 </inquiries>

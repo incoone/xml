@@ -88,37 +88,131 @@ class AdminController < ApplicationController
     order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
 
     event = Nokogiri::XML::Node.new("Event", doc)
-    event['uuid'] = '8859385943789'
+    event['uuid'] = SecureRandom.uuid
 
-    event << Nokogiri::XML::Node.new("EventName", doc).content = params[:EventName]
+    eventName = Nokogiri::XML::Node.new("EventName", doc)
+    eventName.content = params[:EventName]
+    event << eventName
 
-    event << Nokogiri::XML::Node.new("StartDate", doc).content = params[:StartDate]
+    startDate = Nokogiri::XML::Node.new("StartDate", doc)
+    startDate.content = params[:StartDate]
+    event << startDate
 
-    event << Nokogiri::XML::Node.new("EndDate", doc).content = params[:EndDate]
+    endDate = Nokogiri::XML::Node.new("EndDate", doc)
+    endDate.content = params[:EndDate]
+    event << endDate
 
     eventAddress = Nokogiri::XML::Node.new("EventAddress", doc)
 
-    eventAddress << Nokogiri::XML::Node.new("Comment", doc).content = params[:EComment]
+    eventComment = Nokogiri::XML::Node.new("Comment", doc)
+    eventComment.content = params[:EComment]
+    eventAddress << eventComment
 
     fullAddress = Nokogiri::XML::Node.new("FullAddress", doc)
 
-    fullAddress << Nokogiri::XML::Node.new("Country", doc).content = params[:EFCountry]
+    country = Nokogiri::XML::Node.new("Country", doc)
+    country.content = params[:EFCountry]
+    fullAddress << country
 
-    fullAddress << Nokogiri::XML::Node.new("State", doc).content = params[:EFState]
+    state = Nokogiri::XML::Node.new("State", doc)
+    state.content = params[:EFState]
+    fullAddress << state
 
-    fullAddress << Nokogiri::XML::Node.new("City", doc).content = params[:EFCity]
+    city = Nokogiri::XML::Node.new("City", doc)
+    city.content = params[:EFCity]
+    fullAddress << city
 
-    fullAddress << Nokogiri::XML::Node.new("Address", doc).content = params[:EFAddress]
+    address = Nokogiri::XML::Node.new("Address", doc)
+    address.content = params[:EFAddress]
+    fullAddress << address
 
-    fullAddress << Nokogiri::XML::Node.new("Zip", doc).content = params[:EFZip]
+    zip = Nokogiri::XML::Node.new("Zip", doc)
+    zip.content = params[:EFZip]
+    fullAddress << zip
 
     eventAddress << fullAddress
     event << eventAddress
-    order.add_child(event)
+
+    order.add_child(event.to_xml + "\n")
     # new_entry.add_child(para.to_xml + "\n")
     #doc.root.add_child(event.to_xml + "\n")
-    #doc = doc.to_xml
+    doc = doc.to_xml
     File.write(orders, doc)
+    redirect_back(fallback_location: root_path)
+  end
+
+  def customerAdd
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+    doc.to_xml
+
+    order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
+
+    customer = Nokogiri::XML::Node.new("Customer", doc)
+    customer['uuid'] = SecureRandom.uuid
+
+    customerName = Nokogiri::XML::Node.new("CustomerName", doc)
+
+    fName = Nokogiri::XML::Node.new("FName", doc)
+    fName.content = params[:FName]
+    customerName << fName
+
+    lName = Nokogiri::XML::Node.new("LName", doc)
+    lName.content = params[:LName]
+    customerName << lName
+
+    customer << customerName
+
+    telNo = Nokogiri::XML::Node.new("TelNo", doc)
+    telNo.content = params[:TelNo]
+    customer << telNo
+
+    mail = Nokogiri::XML::Node.new("Mail", doc)
+    mail.content = params[:Mail]
+    customer << mail
+
+    fullAddress = Nokogiri::XML::Node.new("FullAddress", doc)
+
+    country = Nokogiri::XML::Node.new("Country", doc)
+    country.content = params[:Country]
+    fullAddress << country
+
+    state = Nokogiri::XML::Node.new("State", doc)
+    state.content = params[:State]
+    fullAddress << state
+
+    city = Nokogiri::XML::Node.new("City", doc)
+    city.content = params[:City]
+    fullAddress << city
+
+    zip = Nokogiri::XML::Node.new("Zip", doc)
+    zip.content = params[:Zip]
+    fullAddress << zip
+
+    address = Nokogiri::XML::Node.new("Address", doc)
+    address.content = params[:Address]
+    fullAddress << address
+
+    customer << fullAddress
+
+    company = Nokogiri::XML::Node.new("Company", doc)
+
+    companyName = Nokogiri::XML::Node.new("CompanyName", doc)
+    companyName.content = params[:CompanyName]
+    company << companyName
+
+    taxNo = Nokogiri::XML::Node.new("TaxNo", doc)
+    taxNo.content = params[:TaxNo]
+    company << taxNo
+
+    customer << company
+
+    order.add_child(customer.to_xml + "\n")
+    # new_entry.add_child(para.to_xml + "\n")
+    #doc.root.add_child(event.to_xml + "\n")
+    doc = doc.to_xml
+    File.write(orders, doc)
+    redirect_back(fallback_location: root_path)
   end
 
   def eventDel

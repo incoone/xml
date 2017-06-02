@@ -62,7 +62,7 @@
     <Cost Currency="PLN">
       <FullCost>400</FullCost>
       <Prepayment>50</Prepayment>
-      <Invoice>NIE</Invoice>
+      <Invoice></Invoice>
     </Cost>
     <Customer uuid="061c4991-e817-4fcc-b2f1-848d448c79cc">
       <CustomerName>

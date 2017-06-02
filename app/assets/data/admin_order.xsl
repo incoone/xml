@@ -11,9 +11,78 @@
     <div class="container">
       <h4>Zgłoszenie od klienta:</h4>
       <br/>
-      <xsl:apply-templates select="//inquiry[@Key=$key]"/>
+      <xsl:apply-templates select="//inquiry[contains(@Key, $key)]"/>
       <h4>Ustalenia:</h4>
       <xsl:apply-templates select="//Order[@Key=$key]"/>
+    </div>
+    <hr/>
+    <p>stwórz nowy event bądź uzupełnij formatkę kontaktu</p>
+    <div class="container home">
+      <div class="card admin">
+        <div class="card-block">
+          <form action="/admin/{$key}/eventAdd/" method="post">
+            <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+            <input name="EventName" type="text" class="form-control form-control-sm" placeholder="nazwa eventu"/>
+            <hr/>
+            <div class="input-group max">
+              od:
+              <input name="StartDate" type="text" class="col-6 form-control form-control-sm" placeholder="/2017-06-12T08:00:00/"/>
+              do:
+              <input name="EndDate" type="text" class="col-6 form-control form-control-sm" placeholder="/2017-06-12T08:00:00/"/>
+            </div>
+            <hr/>
+            <input name="EComment" type="text" class="form-control form-control-sm" placeholder="opis miejsca"/>
+            <input name="EFAddress" type="text" class="form-control form-control-sm" placeholder="ulica"/>
+            <div class="input-group max">
+              <input name="EFZip" type="text" class="col-3 form-control form-control-sm"
+                     placeholder="ZIP"/>
+              <input name="EFCity" type="text" class="col-3 form-control form-control-sm"
+                     placeholder="miasto"/>
+              <input name="EFState" type="text" class="col-3 form-control form-control-sm"
+                     placeholder="województwo"/>
+              <input name="EFCountry" type="text" class="col-3 form-control form-control-sm"
+                     placeholder="państwo"/>
+            </div>
+            <br/>
+
+            <button type="submit" class="btn btn-success pull-right">Dodaj nową kartę eventu</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card admin">
+        <div class="card-block">
+          <form action="/admin/{$key}/customerAdd/" method="post">
+            <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+            <div class="input-group max">
+              <input name="FName" type="text" class="col-6 form-control form-control-sm" placeholder="imie"/>
+              <input name="LName" type="text" class="col-6 form-control form-control-sm" placeholder="nazwisko"/>
+            </div>
+            <div class="input-group max">
+              <input name="CompanyName" type="text" class="col-8 form-control form-control-sm" placeholder="firma"/>
+              <input name="TaxNo" type="text" class="col-4 form-control form-control-sm" placeholder="NIP"/>
+            </div>
+            <hr/>
+            <input name="Address" type="text" class="form-control form-control-sm" placeholder="ulica"/>
+            <div class="input-group max">
+              <input name="Zip" type="text" class="col-4 form-control form-control-sm" placeholder="ZIP"/>
+              <input name="City" type="text" class="col-4 form-control form-control-sm" placeholder="miasto"/>
+            </div>
+            <div class="input-group max">
+              <input name="State" type="text" class="col-4 form-control form-control-sm" placeholder="województwo"/>
+              <input name="Country" type="text" class="col-4 form-control form-control-sm" placeholder="państwo"/>
+            </div>
+            <hr/>
+            <div class="input-group max">
+              <input name="TelNo" type="text" class="col-8 form-control form-control-sm" placeholder="telefon"/>
+              <input name="Mail" type="text" class="col-4 form-control form-control-sm" placeholder="mail"/>
+            </div>
+
+            <hr/>
+            <button type="submit" class="btn btn-success pull-right">Dodaj nową kartę kontaktu</button>
+          </form>
+        </div>
+      </div>
     </div>
   </xsl:template>
 
@@ -73,7 +142,10 @@
       <div class="col-lg-6">
         <div class="input-group">
           <span class="input-group-addon input-group-addon-sm">faktura?
-            <input type="checkbox" aria-label="faktura?"/>
+            <xsl:if test="/Cost/Invoice='TAK'">
+              <input name="Invoice" checked="checked" type="checkbox" aria-label="faktura?"/>
+            </xsl:if>
+
           </span>
           <span class="input-group-addon input-group-addon-sm">kwota za całość:</span>
           <input type="text" class="form-control form-control-sm" value="{Cost/FullCost}"
@@ -99,40 +171,6 @@
     <div class="container home">
       <xsl:apply-templates select="Event"/>
       <xsl:apply-templates select="Customer"/>
-    </div>
-    <hr/>
-    <div class="container home">
-      <div class="card admin">
-        <div class="card-block">
-          <form action="/admin/{$key}/eventAdd/" method="post">
-            <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
-            <input name="EventName" type="text" class="form-control form-control-sm" placeholder="nazwa eventu"/>
-            <hr/>
-            <div class="input-group max">
-              od:
-              <input name="StartDate" type="text" class="col-6 form-control form-control-sm" placeholder="/2017-06-12T08:00:00/"/>
-              do:
-              <input name="EndDate" type="text" class="col-6 form-control form-control-sm" placeholder="/2017-06-12T08:00:00/"/>
-            </div>
-            <hr/>
-            <input name="EComment" type="text" class="form-control form-control-sm" placeholder="opis miejsca"/>
-            <input name="EFAddress" type="text" class="form-control form-control-sm" placeholder="ulica"/>
-            <div class="input-group max">
-              <input name="EFZip" type="text" class="col-3 form-control form-control-sm"
-                     placeholder="ZIP"/>
-              <input name="EFCity" type="text" class="col-3 form-control form-control-sm"
-                     placeholder="miasto"/>
-              <input name="EFState" type="text" class="col-3 form-control form-control-sm"
-                     placeholder="województwo"/>
-              <input name="EFCountry" type="text" class="col-3 form-control form-control-sm"
-                     placeholder="państwo"/>
-            </div>
-            <br/>
-
-            <button type="submit" class="btn btn-success pull-right">Dodaj nowy</button>
-          </form>
-        </div>
-      </div>
     </div>
   </xsl:template>
 
