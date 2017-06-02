@@ -44,6 +44,30 @@ class AdminController < ApplicationController
     File.write(orders, doc)
   end
 
+  def pay
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    doc = Nokogiri::XML(File.read(orders))
+    propCost = doc.xpath("//Order[@Key=" + params[:id] + "]/Cost")[0]
+    propCost.xpath("FullCost")[0].content = params[:FullCost]
+    propCost.xpath("Prepayment")[0].content = params[:Prepayment]
+
+    if(params[:Invoice]=="on")
+      propCost.xpath("Invoice")[0].content = 'TAK'
+    else
+      propCost.xpath("Invoice")[0].content = 'NIE'
+    end
+
+    if(params[:Currency]=="PLN")
+      propCost['Currency'] = 'PLN'
+    elsif(params[:Currency]=="USD")
+      propCost['Currency'] = 'USD'
+    else
+      propCost['Currency'] = 'EUR'
+    end
+    doc = doc.to_xml
+    File.write(orders, doc)
+  end
+
   def event
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
     doc = Nokogiri::XML(File.read(orders))

@@ -8,8 +8,11 @@
   </xsl:variable>
 
   <xsl:template name="user_data" match="/">
+    
     <div class="container">
-      <h4>Zgłoszenie od klienta: <xsl:value-of select="$key"/></h4>
+      <h4>Zgłoszenie od klienta:
+        <xsl:value-of select="$key"/>
+      </h4>
       <!--      <xsl:apply-templates select="//inquiry[contains(@Key, 'WEBW')]"/> -->
       <xsl:apply-templates select="//inquiry[contains(@Key, $key)]"/>
 
@@ -27,9 +30,11 @@
             <hr/>
             <div class="input-group max">
               od:
-              <input name="StartDate" type="text" class="col-6 form-control form-control-sm" placeholder="/2017-06-12T08:00:00/"/>
+              <input name="StartDate" type="text" class="col-6 form-control form-control-sm"
+                     placeholder="/2017-06-12T08:00:00/"/>
               do:
-              <input name="EndDate" type="text" class="col-6 form-control form-control-sm" placeholder="/2017-06-12T08:00:00/"/>
+              <input name="EndDate" type="text" class="col-6 form-control form-control-sm"
+                     placeholder="/2017-06-12T08:00:00/"/>
             </div>
             <hr/>
             <input name="EComment" type="text" class="form-control form-control-sm" placeholder="opis miejsca"/>
@@ -140,35 +145,58 @@
       </div>
     </form>
 
-    <div class="row form-admin">
-      <div class="col-lg-6">
-        <div class="input-group">
-          <span class="input-group-addon input-group-addon-sm">faktura?
-            <xsl:if test="/Cost/Invoice='TAK'">
-              <input name="Invoice" checked="checked" type="checkbox" aria-label="faktura?"/>
-            </xsl:if>
+    <form action="/admin/{$key}/pay/" method="post">
+      <div class="row form-admin">
+        <div class="col-lg-6">
+          <input name="authenticity_token" value="&lt;%= form_authenticity_token %>" type="hidden"/>
+          <div class="input-group">
+            <span class="input-group-addon input-group-addon-sm">faktura?
+              <xsl:choose>
+                <xsl:when test="Cost[Invoice='TAK']">
+                  <input name="Invoice" checked="checked" type="checkbox" aria-label="faktura?"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <input name="Invoice" type="checkbox" aria-label="faktura?"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </span>
+            <span class="input-group-addon input-group-addon-sm">kwota za całość:</span>
+            <input name="FullCost" type="text" class="form-control form-control-sm" value="{Cost/FullCost}"
+                   aria-label="Text input with checkbox"/>
+            <select name="Currency" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+              <xsl:choose>
+                <xsl:when test="Cost[@Currency='PLN']">
+                  <option value="PLN" selected="selected">PLN</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                </xsl:when>
+                <xsl:when test="Cost[@Currency='USD']">
+                  <option value="PLN">PLN</option>
+                  <option value="USD" selected="selected">USD</option>
+                  <option value="EUR">EUR</option>
+                </xsl:when>
+                <xsl:otherwise>
+                  <option value="PLN">PLN</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR" selected="selected">EUR</option>
+                </xsl:otherwise>
+              </xsl:choose>
+            </select>
+          </div>
 
-          </span>
-          <span class="input-group-addon input-group-addon-sm">kwota za całość:</span>
-          <input type="text" class="form-control form-control-sm" value="{Cost/FullCost}"
-                 aria-label="Text input with checkbox"/>
-          <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-            <option value="PLN" selected="selected">PLN</option>
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-          </select>
+        </div>
+        <div class="col-lg-4">
+          <div class="input-group">
+            <span class="input-group-addon">zapłacono:</span>
+            <input name="Prepayment" type="text" class="form-control" value="{Cost/Prepayment}"
+                   aria-label="Text input with radio button"/>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <button type="submit" class="btn btn-primary btn-sm pull-right">Zaktualizuj</button>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="input-group">
-          <span class="input-group-addon">zapłacono:</span>
-          <input type="text" class="form-control" value="{Cost/Prepayment}" aria-label="Text input with radio button"/>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <button type="submit" class="btn btn-primary btn-sm pull-right">Zaktualizuj</button>
-      </div>
-    </div>
+    </form>
     <hr/>
     <div class="container home">
       <xsl:apply-templates select="Event"/>
@@ -278,7 +306,6 @@
     </div>
 
   </xsl:template>
-
 
 
 </xsl:stylesheet>
