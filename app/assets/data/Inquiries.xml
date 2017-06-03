@@ -104,4 +104,60 @@
     <comment>Sesja odebrania dyplomu magisterskiego.</comment>
     <package>option1</package>
   </inquiry>
+  <inquiry Key="76544">
+    <mail>znaczki@gmail.com</mail>
+    <name>Ireneusz Biernacki</name>
+    <phone>516456789</phone>
+    <date>28 lipiec 2017 16:00-22:00</date>
+    <comment>Potrzebujemy wykonania zdjęć podczas dorocznego spotkania filatelistów. Proszę być przygotowanym na możliwość robienia zdjęć pojedynczych znaczków podczas wieczoru jak i również zaproszonych gości.</comment>
+    <package>option2</package>
+  </inquiry>
+  <inquiry Key="4489">
+    <mail>SkierCon@skierniewice.gov.pl</mail>
+    <name>Dominik Anioł</name>
+    <phone>795456789</phone>
+    <date>28 lipca o 14:00 do 30 lipca o 22:00</date>
+    <comment>Potrzebujemy poważnej firmy do uwiecznienia wydarzenia jakim jest Skierniewicki Konwent Fantasy SKIERCON. Wymagamy 2 lub 3 fotografów ponieważ będzie się na prawdę dużo działo. Adres wydarzenia PWSZ w Skierniewicach ul. Batorego 64 C, 96-100 Skierniewice.</comment>
+    <package>option2</package>
+  </inquiry>
+  <inquiry Key="46460">
+    <mail>andziaandzia@onet.pl</mail>
+    <name>Amanda Krzymińska</name>
+    <phone>512456547</phone>
+    <date>20 sierpień 2017 09:00 - 18:00</date>
+    <comment>Chciała bym ładne zdjęcia zrobione gdzieś w centrum miasta które nadawały by się do mojego portfolio.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="67121">
+    <mail>kossanowa@interia.pl</mail>
+    <name>Jakub Kosiński</name>
+    <phone>512456158</phone>
+    <date>25 sierpień 2017 12:00 - 18:00</date>
+    <comment>Witam wraz z kolegami z grupy tanecznej chcielibyśmy zdjęcia grupowe.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="95612">
+    <mail>dzikidudzik@wp.pl</mail>
+    <name>Damian Dudzik</name>
+    <phone>795451289</phone>
+    <date>18 czerwca 2017 11:00 do 13:00</date>
+    <comment>Witam chciałbym wykonać jakieś przyjemne zdjęcia rodzinne.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="65189">
+    <mail>kamis1985@wp.pl</mail>
+    <name>Kamil Selenta</name>
+    <phone>512121248</phone>
+    <date>14 lipiec 2017 8:00-16:00</date>
+    <comment>Potrzebuję wykonać zdjęcia promocyjne szytych przez nas zabawnych strojów dla królików i kaczek.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="41796">
+    <mail>piotr.bet@dlugoleccy.com.pl</mail>
+    <name>piotr</name>
+    <phone>888777666</phone>
+    <date>05.01.2018</date>
+    <comment/>
+    <package>option1</package>
+  </inquiry>
 </inquiries>

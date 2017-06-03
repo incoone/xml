@@ -60,8 +60,8 @@
     </Event>
     <Cost Currency="PLN">
       <FullCost>400</FullCost>
-      <Prepayment>50</Prepayment>
-      <Invoice/>
+      <Prepayment>400</Prepayment>
+      <Invoice>NIE</Invoice>
     </Cost>
     <Customer uuid="061c4991-e817-4fcc-b2f1-848d448c79cc">
       <CustomerName>
@@ -491,7 +491,7 @@
     <Information>Sesja zdjęciowa narzeczeńska w Skierniewicach.</Information>
     <Cost Currency="USD">
       <FullCost>200</FullCost>
-      <Prepayment>50</Prepayment>
+      <Prepayment>200</Prepayment>
       <Invoice>NIE</Invoice>
     </Cost>
     <Customer uuid="cab713bd-842e-4887-9fd2-99e26232ca88">
@@ -593,5 +593,189 @@
         </FullAddress>
       </EventAddress>
     </Event>
+  </Order>
+  <Order Key="4489">
+    <Information>Zdjęcia podczas całego konwentu SkierCon</Information>
+    <Cost Currency="PLN">
+      <FullCost>2500</FullCost>
+      <Prepayment>2500</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+
+    <Customer uuid="3a4fd617-824b-4491-9cf3-7678ea0015d2">
+      <CustomerName>
+        <FName>Dominik </FName>
+        <LName>Anioł</LName>
+      </CustomerName>
+      <TelNo>795456789</TelNo>
+      <Mail>SkierCon@skierniewice.gov.pl</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Skierniewice</City>
+        <Zip>96-100</Zip>
+        <Address> Batorego 64 C</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName/>
+        <TaxNo/>
+      </Company>
+    </Customer>
+    <Event uuid="87d46f65-67d6-437b-a07e-3a44de487d59">
+      <EventName>Konwent SkierCon</EventName>
+      <StartDate>2017-07-28 2:00 PM</StartDate>
+      <EndDate>2017-07-30 10:00 PM</EndDate>
+      <EventAddress>
+        <Comment>PWSZ w Skierniewicach</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Skierniewice</City>
+          <Address>Batorego 64 C</Address>
+          <Zip>96-100</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+  </Order>
+  <Order Key="76544">
+    <Information>Doroczne spotkanie filatelistów.</Information>
+    <Cost Currency="PLN">
+      <FullCost>1543</FullCost>
+      <Prepayment>1500</Prepayment>
+      <Invoice>TAK</Invoice>
+    </Cost>
+    <Customer uuid="9a83958e-851d-476b-878f-71ade35316d9">
+      <CustomerName>
+        <FName>Ireneusz</FName>
+        <LName>Biernacki</LName>
+      </CustomerName>
+      <TelNo>516456789</TelNo>
+      <Mail>znaczki@gmail.com</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łódź</City>
+        <Zip>90-269</Zip>
+        <Address>Piotrkowska 50</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName>Stowarzyszenie Filatelistów Polski</CompanyName>
+        <TaxNo>8364585456</TaxNo>
+      </Company>
+    </Customer>
+    <Event uuid="1844994d-0d4b-457e-9c53-722bb0885b8e">
+      <EventName>Doroczne spotkanie filatelistów</EventName>
+      <StartDate>2017-10-20 8:00 PM</StartDate>
+      <EndDate>2017-10-21 4:00 AM</EndDate>
+      <EventAddress>
+        <Comment>Sala bankietowa pełna znaczków pocztowych.</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łódź</City>
+          <Address>Aleja marsz. Józefa Piłsudskiego 15/23</Address>
+          <Zip>90-269</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+    <Event uuid="0a24f0a5-9f68-48f1-9b1a-45efedaddbbf">
+      <EventName>Msza św. w Katedrze Łódzkiej.</EventName>
+      <StartDate>2017-10-20 6:00 PM</StartDate>
+      <EndDate>2017-10-20 7:00 PM</EndDate>
+      <EventAddress>
+        <Comment>Katedra Łódzka</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łódź</City>
+          <Address> Ignacego Skorupki 9</Address>
+          <Zip>90-458</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+  </Order>
+  <Order Key="65189">
+    <Information>Zdjęcia ubranek dla kaczek i królików.</Information>
+    <Cost Currency="PLN">
+      <FullCost>1000</FullCost>
+      <Prepayment>1000</Prepayment>
+      <Invoice>TAK</Invoice>
+    </Cost>
+    <Event uuid="2f8a4f95-cb5d-4f8d-958b-624ff2e4b3a7">
+      <EventName>Zdjęcia królików i kaczek w Pasażu Abramowskiego</EventName>
+      <StartDate>2017-07-14 8:00 AM</StartDate>
+      <EndDate>2017-07-14 6:00 PM</EndDate>
+      <EventAddress>
+        <Comment>Pasaż Abramowskiego</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łódź</City>
+          <Address>Pasaż Abramowskiego</Address>
+          <Zip>90-993</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+    <Customer uuid="40070e86-1035-495e-8cca-cc9c516c36ae">
+      <CustomerName>
+        <FName>Kamil</FName>
+        <LName>Selenta</LName>
+      </CustomerName>
+      <TelNo>512121248</TelNo>
+      <Mail>kamis1985@wp.pl</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łódź</City>
+        <Zip>90-269</Zip>
+        <Address>Piotrkowska 16</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName>Króliczo-kacze Ciuszki sp. z O.O.</CompanyName>
+        <TaxNo>456897514</TaxNo>
+      </Company>
+    </Customer>
+  </Order>
+  <Order Key="2230">
+    <Information>Sesja z okazji odebrania dyplomu magisterskiego</Information>
+    <Cost Currency="PLN">
+      <FullCost>200</FullCost>
+      <Prepayment>0</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Event uuid="53030558-d436-4207-b627-bee057577d7d">
+      <EventName>Sesja z okazji odebrania dyplomu magisterskiego</EventName>
+      <StartDate>2017-10-02 6:00 PM</StartDate>
+      <EndDate>2017-10-02 7:00 PM</EndDate>
+      <EventAddress>
+        <Comment>Wydział Matematyki i Informatyki Uniwersytetu Łódzkiego</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łódź</City>
+          <Address>Stefana Banacha 22</Address>
+          <Zip>90-238</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+    <Customer uuid="a9c6df01-b75b-451a-82a5-867ab425eff7">
+      <CustomerName>
+        <FName>Paweł</FName>
+        <LName>Madej</LName>
+      </CustomerName>
+      <TelNo>792541781</TelNo>
+      <Mail>madej.mail@gmail.com</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łowicz</City>
+        <Zip>99-400</Zip>
+        <Address>Bratkowice, 33/1</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName/>
+        <TaxNo/>
+      </Company>
+    </Customer>
   </Order>
 </Orders>
