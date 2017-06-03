@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:eventAdd, :customerAdd]
+  skip_before_action :verify_authenticity_token, only: [:eventAdd, :customerAdd, :pay, :info]
 
   def index
     @admin_index = AdminIndex.new

@@ -31,10 +31,10 @@
             <div class="input-group max">
               od:
               <input name="StartDate" type="text" class="col-6 form-control form-control-sm"
-                     placeholder="/2017-06-12T08:00:00/"/>
+                     placeholder="YYYY-MM-DD h:mm A"/>
               do:
               <input name="EndDate" type="text" class="col-6 form-control form-control-sm"
-                     placeholder="/2017-06-12T08:00:00/"/>
+                     placeholder="YYYY-MM-DD h:mm A"/>
             </div>
             <hr/>
             <input name="EComment" type="text" class="form-control form-control-sm" placeholder="opis miejsca"/>
@@ -274,10 +274,10 @@
           <div class="input-group max">
             od:
             <input name="StartDate" type="text" class="col-6 form-control form-control-sm" value="{StartDate}"
-                   placeholder="/2017-06-12T08:00:00/"/>
+                   placeholder="YYYY-MM-DD h:mm A"/>
             do:
             <input name="EndDate" type="text" class="col-6 form-control form-control-sm" value="{EndDate}"
-                   placeholder="/2017-06-12T08:00:00/"/>
+                   placeholder="YYYY-MM-DD h:mm A"/>
           </div>
           <hr/>
 
