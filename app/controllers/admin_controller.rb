@@ -44,12 +44,12 @@ class AdminController < ApplicationController
     @out = xslt.transform(doc)
   end
 
-  def ordersSort
+  def eventsSort
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
-    admin_show_orders_sorting = File.join(Rails.root, 'app', 'assets', 'data', 'admin_show_orders_sorting.xsl')
+    admin_show_events_sorting = File.join(Rails.root, 'app', 'assets', 'data', 'admin_show_events_sorting.xsl')
 
     doc = Nokogiri::XML(File.read(orders))
-    xslt = Nokogiri::XSLT(File.read(admin_show_orders_sorting))
+    xslt = Nokogiri::XSLT(File.read(admin_show_events_sorting))
 
     @out = xslt.transform(doc)
   end

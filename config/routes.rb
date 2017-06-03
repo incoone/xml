@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/admin/', to: 'admin#index'
   get '/admin/orders', to: 'admin#orders'
-  get '/admin/ordersSort', to: 'admin#ordersSort'
+  get '/admin/eventsSort', to: 'admin#eventsSort'
 
 
   get '/admin/:id', to: 'admin#id'
