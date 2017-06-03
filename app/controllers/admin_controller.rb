@@ -47,7 +47,7 @@ class AdminController < ApplicationController
   def info
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
     doc = Nokogiri::XML(File.read(orders))
-    property = doc.xpath("//Order[@Key=" + params[:id] + "]/Information")[0]
+    property = doc.xpath('//Order[@Key=' + params[:id] + ']/Information')[0]
     property.content = params[:information]
     doc = doc.to_xml
     File.write(orders, doc)
@@ -213,98 +213,98 @@ class AdminController < ApplicationController
     doc = Nokogiri::XML(File.read(orders))
     doc.to_xml
 
-    order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
-    if(order.nil?)
-      order = Nokogiri::XML::Node.new("Order", doc)
-      order['Key'] = params[:id]
+    _order = doc.xpath('//Order[@Key=' + params[:id] + ']')[0]
+    if(_order.nil?)
+      _order = Nokogiri::XML::Node.new('Order', doc)
+      _order['Key'] = params[:id]
 
-      information = Nokogiri::XML::Node.new("Information", doc)
-      order << information
+      _information = Nokogiri::XML::Node.new('Information', doc)
+      _order << _information
 
-      cost = Nokogiri::XML::Node.new("Cost", doc)
-      cost['Currency'] = "PLN"
+      _cost = Nokogiri::XML::Node.new('Cost', doc)
+      _cost['Currency'] = 'PLN'
 
-      fullCost = Nokogiri::XML::Node.new("FullCost", doc)
-      cost << fullCost
+      _full_cost = Nokogiri::XML::Node.new('FullCost', doc)
+      _cost << _full_cost
 
-      prepayment = Nokogiri::XML::Node.new("Prepayment", doc)
-      cost << prepayment
+      _prepayment = Nokogiri::XML::Node.new('Prepayment', doc)
+      _cost << _prepayment
 
-      invoice = Nokogiri::XML::Node.new("Invoice", doc)
-      cost << invoice
+      invoice = Nokogiri::XML::Node.new('Invoice', doc)
+      _cost << invoice
 
-      order << cost
+      _order << _cost
 
-      o = doc.xpath("Orders")[0]
-      o.add_child(order.to_xml + "\n")
+      _o = doc.xpath('Orders')[0]
+      _o.add_child(_order.to_xml + "\n")
       doc = doc.to_xml
       File.write(orders, doc)
       doc = Nokogiri::XML(File.read(orders))
       doc.to_xml
 
-      order = doc.xpath("//Order[@Key=" + params[:id] + "]")[0]
+      _order = doc.xpath('//Order[@Key=' + params[:id] + ']')[0]
     end
 
-    customer = Nokogiri::XML::Node.new"Customer", doc
-    customer['uuid'] = SecureRandom.uuid
+    _customer = Nokogiri::XML::Node.new'Customer', doc
+    _customer['uuid'] = SecureRandom.uuid
 
-    customerName = Nokogiri::XML::Node.new("CustomerName", doc)
+    _customer_name = Nokogiri::XML::Node.new('CustomerName', doc)
 
-    fName = Nokogiri::XML::Node.new("FName", doc)
-    fName.content = params[:FName]
-    customerName << fName
+    _f_name = Nokogiri::XML::Node.new('FName', doc)
+    _f_name.content = params[:FName]
+    _customer_name << _f_name
 
-    lName = Nokogiri::XML::Node.new("LName", doc)
-    lName.content = params[:LName]
-    customerName << lName
+    _l_name = Nokogiri::XML::Node.new('LName', doc)
+    _l_name.content = params[:LName]
+    _customer_name << _l_name
 
-    customer << customerName
+    _customer << _customer_name
 
-    telNo = Nokogiri::XML::Node.new("TelNo", doc)
-    telNo.content = params[:TelNo]
-    customer << telNo
+    _tel_no = Nokogiri::XML::Node.new('TelNo', doc)
+    _tel_no.content = params[:TelNo]
+    _customer << _tel_no
 
-    mail = Nokogiri::XML::Node.new("Mail", doc)
-    mail.content = params[:Mail]
-    customer << mail
+    _mail = Nokogiri::XML::Node.new('Mail', doc)
+    _mail.content = params[:Mail]
+    _customer << _mail
 
-    fullAddress = Nokogiri::XML::Node.new("FullAddress", doc)
+    _full_address = Nokogiri::XML::Node.new('FullAddress', doc)
 
-    country = Nokogiri::XML::Node.new("Country", doc)
+    country = Nokogiri::XML::Node.new('Country', doc)
     country.content = params[:Country]
-    fullAddress << country
+    _full_address << country
 
-    state = Nokogiri::XML::Node.new("State", doc)
+    state = Nokogiri::XML::Node.new('State', doc)
     state.content = params[:State]
-    fullAddress << state
+    _full_address << state
 
-    city = Nokogiri::XML::Node.new("City", doc)
+    city = Nokogiri::XML::Node.new('City', doc)
     city.content = params[:City]
-    fullAddress << city
+    _full_address << city
 
-    zip = Nokogiri::XML::Node.new("Zip", doc)
+    zip = Nokogiri::XML::Node.new('Zip', doc)
     zip.content = params[:Zip]
-    fullAddress << zip
+    _full_address << zip
 
-    address = Nokogiri::XML::Node.new("Address", doc)
+    address = Nokogiri::XML::Node.new('Address', doc)
     address.content = params[:Address]
-    fullAddress << address
+    _full_address << address
 
-    customer << fullAddress
+    _customer << _full_address
 
-    company = Nokogiri::XML::Node.new("Company", doc)
+    _company = Nokogiri::XML::Node.new('Company', doc)
 
-    companyName = Nokogiri::XML::Node.new("CompanyName", doc)
-    companyName.content = params[:CompanyName]
-    company << companyName
+    _company_name = Nokogiri::XML::Node.new('CompanyName', doc)
+    _company_name.content = params[:CompanyName]
+    _company << _company_name
 
-    taxNo = Nokogiri::XML::Node.new("TaxNo", doc)
-    taxNo.content = params[:TaxNo]
-    company << taxNo
+    _tax_no = Nokogiri::XML::Node.new('TaxNo', doc)
+    _tax_no.content = params[:TaxNo]
+    _company << _tax_no
 
-    customer << company
+    _customer << _company
 
-    order.add_child(customer.to_xml + "\n")
+    _order.add_child(_customer.to_xml + "\n")
     # new_entry.add_child(para.to_xml + "\n")
     #doc.root.add_child(event.to_xml + "\n")
     doc = doc.to_xml
