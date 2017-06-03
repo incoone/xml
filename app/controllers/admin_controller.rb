@@ -44,6 +44,16 @@ class AdminController < ApplicationController
     @out = xslt.transform(doc)
   end
 
+  def ordersSort
+    orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
+    admin_show_orders_sorting = File.join(Rails.root, 'app', 'assets', 'data', 'admin_show_orders_sorting.xsl')
+
+    doc = Nokogiri::XML(File.read(orders))
+    xslt = Nokogiri::XSLT(File.read(admin_show_orders_sorting))
+
+    @out = xslt.transform(doc)
+  end
+
   def info
     orders = File.join(Rails.root, 'app', 'assets', 'data', 'orders.xml')
     doc = Nokogiri::XML(File.read(orders))

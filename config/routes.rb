@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/admin/', to: 'admin#index'
   get '/admin/orders', to: 'admin#orders'
+  get '/admin/ordersSort', to: 'admin#ordersSort'
+
 
   get '/admin/:id', to: 'admin#id'
   post '/admin/:id/info/', to: 'admin#info'
