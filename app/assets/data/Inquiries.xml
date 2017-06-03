@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inquiries>
-<inquiry Key="0008">
-  <mail>piotr.bet@dlugoleccy.com.pl</mail>
-  <name>piotr</name>
-  <phone>888777666</phone>
-  <date>05.01.2018</date>
-  <comment/>
-  <package>option2</package>
-</inquiry>
+  <inquiry Key="0008">
+    <mail>piotr.bet@dlugoleccy.com.pl</mail>
+    <name>piotr</name>
+    <phone>888777666</phone>
+    <date>05.01.2018</date>
+    <comment/>
+    <package>option2</package>
+  </inquiry>
   <inquiry Key="436">
     <mail>piotr.bet@dlugoleccy.com.pl</mail>
     <name>piotr</name>
@@ -31,5 +31,85 @@
     <date/>
     <comment>Zdjęcia podczas imprezy firmowej.</comment>
     <package>option2</package>
+  </inquiry>
+  <inquiry Key="51638">
+    <mail>joanna@gmail.com</mail>
+    <name>Joanna Michalska</name>
+    <phone>500123455</phone>
+    <date/>
+    <comment>Sesja zdjęciowa narzeczeńska.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="24077">
+    <mail>adam@bednar.pl</mail>
+    <name>Adam Bednarski</name>
+    <phone>600123465</phone>
+    <date/>
+    <comment>Zdjęcia nowego budynku biurowego firmy.</comment>
+    <package>option2</package>
+  </inquiry>
+  <inquiry Key="93534">
+    <mail>krystus_15@wp.pl</mail>
+    <name>Krystian Daniecki</name>
+    <phone>602456898</phone>
+    <date/>
+    <comment>Dzień dobry, razem z narzeczoną jesteśmy bardzo zainteresowani, żeby Państwo wykonali nasze zdjęcia ślubne podczas przygotowań w domu, w kościele i oczywiście podczas przyjęcia weselnego. Chcielibyśmy, żeby podczas całego dnia towarzyszyło nam 2 fotografów uważamy, że lepiej uda się wtedy uchwycić nasz cudowny dzień.</comment>
+    <package>option2</package>
+  </inquiry>
+  <inquiry Key="73127">
+    <mail>promocja@onetime.com</mail>
+    <name>Damian Dzik</name>
+    <phone>426391515</phone>
+    <date/>
+    <comment>We wrześniu nasza firma obchodzi 25 urodziny działalności. Z tej okazji chcemy odświeżyć zdjęcia na naszej witrynie internetowej. Graficy przygotowali już nową szatę graficzną strony do której chcemy przygotowanych w profesjonalny sposób zdjęć pracowników w tym najważniejsze zdjęcie Prezesa. Uważam że uda się nam ustalić dogodny termin wykonania zdjęć.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="96507">
+    <mail>sekretariat@domdzieckaszymanowice.gov.pl</mail>
+    <name>Karolina Modelewska</name>
+    <phone>62 7411340</phone>
+    <date/>
+    <comment>Dzień dobry, Jestem jednym z opiekunów w Domu Dziecka w Szymanowicach. Chcielibyśmy w okresie wakacyjnym wykonać w prezencie za zakończenie roku szkolnego dla naszych dzieci wykonać sesję zdjęciową w naszym ogrodzie pod tytułem 1000 cudownych bajek. Chcielibyśmy by zdjęcia wykonał profesjonalista, żeby zdjęcia te zostały wielką pamiątką dla naszych dzieci. Nasz adres to Długa 6, 63-308 Szymanowice.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="20730">
+    <mail>tymek@onet.pl</mail>
+    <name>Tymon Starczyński</name>
+    <phone>456254145</phone>
+    <date/>
+    <comment>W przyszłym miesiącu wykonam kolejny tatuaż, tym razem będą to całe plecy i chciałbym gdzieś w fabrycznej części Łodzi wykonać zdjęcia mojego nowego cuda na które tak długo czekam. Chciałbym później móc te zdjęcia wyeksponować w formie fototapety więc liczę na bardzo wysoką jakość zdjęć.</comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="57543">
+    <mail>szalony_20@gmail.com</mail>
+    <name>Przemysław Talarowski</name>
+    <phone>789587458</phone>
+    <date>8 lipiec 2017 od 10 do 16</date>
+    <comment>8 lipca odbędą się targi piw regionalnych w Łodzi. Chcielibyśmy zdjęcia upamiętniające tą okazję oraz wykorzystać je w przyszłym roku w formie promocji.</comment>
+    <package>option2</package>
+  </inquiry>
+  <inquiry Key="17305">
+    <mail>bodzioHelikopter@interia.pl</mail>
+    <name>Bogdan Piernik</name>
+    <phone>516145541</phone>
+    <date>17 sierpień 2017 09:00 - 18:00</date>
+    <comment>W sierpniu odbędzie się ceremonia zaślubin mojego ukochanego psa Barego wraz z najukochańszym kotem Lilą. Miłość nie wybiera. Jestem bardzo wzruszony z ich miłości jaką na co dzień widzę i chciałbym upamiętnić tą ceremonię na zdjęciach. Oczywiście po ceremonii zaślubin w moim ogrodzie odbędzie się przyjęcie weselne na które zaprosiliśmy już wszystkich znajomych i sąsiadów.</comment>
+    <package>option2</package>
+  </inquiry>
+  <inquiry Key="9731">
+    <mail>biuro@ostatniechwile.pl</mail>
+    <name>Sławomir Doroba</name>
+    <phone>512456548</phone>
+    <date/>
+    <comment>Właśnie zakupiliśmy nowy karawan i chcemy wykonać zdjęcia prezentujące nasz nowy nabytek na bilbordach które planujemy rozwiesić w całym mieście. </comment>
+    <package>option1</package>
+  </inquiry>
+  <inquiry Key="2230">
+    <mail>madej.mail@gmail.com</mail>
+    <name>Paweł Madej</name>
+    <phone>792541781</phone>
+    <date>2 październik 2018 18:00</date>
+    <comment>Sesja odebrania dyplomu magisterskiego.</comment>
+    <package>option1</package>
   </inquiry>
 </inquiries>

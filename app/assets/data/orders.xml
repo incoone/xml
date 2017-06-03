@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <Orders>
   <Order OrderID="ID-1" Key="0001">
     <Event uuid="4f998977-e8c7-47c4-9c04-df23920a338e">
@@ -62,7 +61,7 @@
     <Cost Currency="PLN">
       <FullCost>400</FullCost>
       <Prepayment>50</Prepayment>
-      <Invoice></Invoice>
+      <Invoice/>
     </Cost>
     <Customer uuid="061c4991-e817-4fcc-b2f1-848d448c79cc">
       <CustomerName>
@@ -119,7 +118,7 @@
     </Customer>
     <Information> Wykonanie portretu w parku. </Information>
   </Order>
-  <Order OrderID="ID-4"  Key="0004">
+  <Order OrderID="ID-4" Key="0004">
     <Event uuid="26d4de41-6f67-49cc-9c3d-c287a429b3ac">
       <EventName>Zdjęcia plenerowe dzienne</EventName>
       <EventAddress>
@@ -184,10 +183,10 @@
           <Address>Piotrkowska 102</Address>
         </FullAddress>
       </EventAddress>
-      <StartDate>2017-04-29T20:00:00</StartDate>
-      <EndDate>2017-04-29T04:00:00</EndDate>
+      <StartDate>2017-04-29 8:00 PM</StartDate>
+      <EndDate>2017-04-29 4:00 AM</EndDate>
     </Event>
-    <Cost Currency="EURO">
+    <Cost Currency="EUR">
       <FullCost>150</FullCost>
       <Prepayment>150</Prepayment>
       <Invoice>NIE</Invoice>
@@ -358,5 +357,241 @@
       <Mail>annaAniaAnna@wp.pl</Mail>
     </Customer>
     <Information> Zdjęcia ślubne z dojazdem do domu Państwa Młodych i podczas Ślubu oraz Wesela. </Information>
+  </Order>
+  <Order Key="4556">
+    <Information>sugestie od klienta: bez zdjęć pijanych pracowników, za zdjęcie kompromitujące prezesa płatność ekstra</Information>
+    <Cost Currency="PLN">
+      <FullCost>600</FullCost>
+      <Prepayment>0</Prepayment>
+      <Invoice>TAK</Invoice>
+    </Cost>
+    <Customer uuid="bdc588e2-c448-4647-aa54-45dc7079a251">
+      <CustomerName>
+        <FName>Michał </FName>
+        <LName>Bratosik</LName>
+      </CustomerName>
+      <TelNo>795458789</TelNo>
+      <Mail>michal@onet.pl</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Lodzkie</State>
+        <City>Łódź</City>
+        <Zip>93-200</Zip>
+        <Address>Banacha 22</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName>Fikcyjna Firma</CompanyName>
+        <TaxNo>78955664412</TaxNo>
+      </Company>
+    </Customer>
+    <Event uuid="8b3db596-2e61-42c6-8e16-7c4ad663dff6">
+      <EventName>zdjecia firmowe</EventName>
+      <StartDate>04/10/2017</StartDate>
+      <EndDate>06/03/2017</EndDate>
+      <EventAddress>
+        <Comment>biurowiec A</Comment>
+        <FullAddress>
+          <Country/>
+          <State/>
+          <City/>
+          <Address>Banacha 22</Address>
+          <Zip/>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+    <Event uuid="9ea8ebcb-1d4a-4813-9b80-8e5be9d3171c">
+      <EventName>logan</EventName>
+      <StartDate>2017-06-03 12:00 AM</StartDate>
+      <EndDate>2017-06-03 12:00 AM</EndDate>
+      <EventAddress>
+        <Comment/>
+        <FullAddress>
+          <Country/>
+          <State/>
+          <City/>
+          <Address/>
+          <Zip/>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+    <Event uuid="3fc08d68-c375-454c-8c57-8b3755fae413">
+      <EventName>Brehen</EventName>
+      <StartDate>2016-01-01 12:00 AM</StartDate>
+      <EndDate>2017-01-01 12:00 AM</EndDate>
+      <EventAddress>
+        <Comment/>
+        <FullAddress>
+          <Country/>
+          <State/>
+          <City/>
+          <Address/>
+          <Zip/>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+    <Event uuid="71a0cb93-400f-48e6-a0c9-19ae9c8b256e">
+      <EventName/>
+      <StartDate>2017-06-02 12:00 AM</StartDate>
+      <EndDate>2017-06-02 12:00 AM</EndDate>
+      <EventAddress>
+        <Comment/>
+        <FullAddress>
+          <Country/>
+          <State/>
+          <City/>
+          <Address/>
+          <Zip/>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+  </Order>
+  <Order Key="436">
+    <Information>Sesja do zdjęcia profilowego na FaceBooka.</Information>
+    <Cost Currency="PLN">
+      <FullCost>100</FullCost>
+      <Prepayment>10</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer uuid="21e1d4ff-344a-4119-be4c-8699e9c0101c">
+      <CustomerName>
+        <FName>Piotr</FName>
+        <LName>Długołęcki</LName>
+      </CustomerName>
+      <TelNo>888777666</TelNo>
+      <Mail>piotr.bet@dlugoleccy.com.pl</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Łódź</City>
+        <Zip>90-269</Zip>
+        <Address>Piotrkowska 20</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName>dlugoleccy.com</CompanyName>
+        <TaxNo>1231412159</TaxNo>
+      </Company>
+    </Customer>
+    <Event uuid="05197064-60a8-4a71-a428-66dafa043a43">
+      <EventName>Sesja profilowa.</EventName>
+      <StartDate>2017-06-03 12:00 AM</StartDate>
+      <EndDate>2017-06-03 1:00 PM</EndDate>
+      <EventAddress>
+        <Comment>Galeria Łódzka</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łódź</City>
+          <Address>Aleja marsz. Józefa Piłsudskiego 15/23</Address>
+          <Zip>90-307</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+  </Order>
+  <Order Key="51638">
+    <Information>Sesja zdjęciowa narzeczeńska w Skierniewicach.</Information>
+    <Cost Currency="USD">
+      <FullCost>200</FullCost>
+      <Prepayment>50</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Customer uuid="cab713bd-842e-4887-9fd2-99e26232ca88">
+      <CustomerName>
+        <FName>Joanna</FName>
+        <LName>Michalska</LName>
+      </CustomerName>
+      <TelNo>500123455</TelNo>
+      <Mail>joanna@gmail.com</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Skierniewice</City>
+        <Zip>96-100</Zip>
+        <Address>Brzozowa 15</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName/>
+        <TaxNo/>
+      </Company>
+    </Customer>
+    <Event uuid="aff9f941-c773-473c-b747-60c2416d57a0">
+      <EventName>Zdjęcia w Parku w Skierniewicach</EventName>
+      <StartDate>2017-06-17 10:00 AM</StartDate>
+      <EndDate>2017-06-17 3:00 PM</EndDate>
+      <EventAddress>
+        <Comment>Park w Skierniewicach</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Skierniewice</City>
+          <Address>Sienkiewicza 15</Address>
+          <Zip>96-100</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+  </Order>
+  <Order Key="9731">
+    <Information>Zdjęcia karawanu na reklamę zakładu pogrzebowego.</Information>
+    <Cost Currency="PLN">
+      <FullCost>600</FullCost>
+      <Prepayment>150</Prepayment>
+      <Invoice>TAK</Invoice>
+    </Cost>
+    <Customer uuid="098fee0f-5856-46ca-af5f-f4b322e8096f">
+      <CustomerName>
+        <FName>Sławomir</FName>
+        <LName>Doroba</LName>
+      </CustomerName>
+      <TelNo>512456548</TelNo>
+      <Mail>biuro@ostatniechwile.pl</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Skierniewice</City>
+        <Zip>96-100</Zip>
+        <Address>Sienkiewicza 5B</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName>Ostatnie Chwilę S.C.</CompanyName>
+        <TaxNo>836-15-15-564</TaxNo>
+      </Company>
+    </Customer>
+    <Event uuid="50b769c9-ca5a-4392-9eb5-3430cb5349c4">
+      <EventName>Sesja samochodu.</EventName>
+      <StartDate>2017-06-19 11:00 AM</StartDate>
+      <EndDate>2017-06-19 3:00 PM</EndDate>
+      <EventAddress>
+        <Comment>Miejski Cmentarz Komunalny, Skierniewice</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Skierniewice</City>
+          <Address>Strobowska 17</Address>
+          <Zip>96-100</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+  </Order>
+  <Order Key="8">
+    <Information>Zdjęcie portretowe.</Information>
+    <Cost Currency="PLN">
+      <FullCost>150</FullCost>
+      <Prepayment>50</Prepayment>
+      <Invoice>NIE</Invoice>
+    </Cost>
+    <Event uuid="7f9520a1-fd8e-4b52-b63e-ad3254cc884d">
+      <EventName/>
+      <StartDate>2017-06-03 12:00 AM</StartDate>
+      <EndDate>2017-06-03 12:00 AM</EndDate>
+      <EventAddress>
+        <Comment/>
+        <FullAddress>
+          <Country/>
+          <State/>
+          <City/>
+          <Address/>
+          <Zip/>
+        </FullAddress>
+      </EventAddress>
+    </Event>
   </Order>
 </Orders>
