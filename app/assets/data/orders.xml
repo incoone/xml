@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Orders>
-  <Order OrderID="ID-1" Key="0001">
+  <Order OrderID="ID-1" Key="1234">
     <Event uuid="4f998977-e8c7-47c4-9c04-df23920a338e">
       <EventName>Zdjęcia plenerowe do kalendarza</EventName>
       <EventAddress>
@@ -42,7 +42,7 @@
     </Customer>
     <Information> Zleceniem jest wykonanie zdjęćdla pierwszej strony kalendarza. </Information>
   </Order>
-  <Order OrderID="ID-2" Key="0002">
+  <Order OrderID="ID-2" Key="1235">
     <Event uuid="46cb4f55-c773-455b-9410-b08f9cd6a135">
       <EventName>Zdjęcia weselne w kościele</EventName>
       <EventAddress>
@@ -80,7 +80,7 @@
     </Customer>
     <Information> Zleceniem jest wykonanie zdjęć podczas ślubu kościelnego. </Information>
   </Order>
-  <Order OrderID="ID-3" Key="0003">
+  <Order OrderID="ID-3" Key="6341">
     <Event uuid="1fd251eb-b7b5-4456-a40d-2d735c891c4e">
       <EventName>Sesja zdjęciowa</EventName>
       <EventAddress>
@@ -118,7 +118,7 @@
     </Customer>
     <Information> Wykonanie portretu w parku. </Information>
   </Order>
-  <Order OrderID="ID-4" Key="0004">
+  <Order OrderID="ID-4" Key="1276">
     <Event uuid="26d4de41-6f67-49cc-9c3d-c287a429b3ac">
       <EventName>Zdjęcia plenerowe dzienne</EventName>
       <EventAddress>
@@ -170,7 +170,7 @@
     </Customer>
     <Information> Sesja plenerowe. </Information>
   </Order>
-  <Order OrderID="ID-5" Key="0005">
+  <Order OrderID="ID-5" Key="7321">
     <Event uuid="eda3fcbf-65bf-4746-a9d5-f77816ab7134">
       <EventName>Zdjęcia z wieczoru panieńskiego</EventName>
       <EventAddress>
@@ -207,7 +207,7 @@
       <Mail>biuro@firma.reklamowa.com.pl</Mail>
     </Customer>
   </Order>
-  <Order OrderID="ID-6" Key="0006">
+  <Order OrderID="ID-6" Key="7364">
     <Event uuid="f8e53581-dc62-4760-a4c9-588fac83bc9d">
       <EventName>Sesja ślubna</EventName>
       <EventAddress>
@@ -260,7 +260,7 @@
     </Customer>
     <Information> Sesja plenerowe. </Information>
   </Order>
-  <Order OrderID="ID-7" Key="0007">
+  <Order OrderID="ID-7" Key="3267">
     <Event uuid="df4e12f8-6554-4ac1-8e87-5deb21192be2">
       <EventName>Zdjęcia u Pana Młodego</EventName>
       <EventAddress>
@@ -571,7 +571,7 @@
       </EventAddress>
     </Event>
   </Order>
-  <Order Key="8">
+  <Order Key="8523">
     <Information>Zdjęcie portretowe.</Information>
     <Cost Currency="PLN">
       <FullCost>150</FullCost>
