@@ -15,12 +15,15 @@
       <body>
         <nav class="navbar navbar-expand-md navbar-light bg-faded">
           <div class="container">
-            <a class="navbar-brand" href="/admin/">Navbar</a>
+            <a class="navbar-brand" href="/">Navbar</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="/">Strona klienta<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/">Strona klienta</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="http://195.181.219.178:3000/assets/photo.xml">Galeria</a>
                 </li>
               </ul>
             </div>
