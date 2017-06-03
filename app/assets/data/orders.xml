@@ -40,7 +40,7 @@
       </Company>
       <Mail>biuro@kalendarz.pl</Mail>
     </Customer>
-    <Information> Zleceniem jest wykonanie zdjęćdla pierwszej strony kalendarza. </Information>
+    <Information>Zleceniem jest wykonanie zdjęćdla pierwszej strony kalendarza.</Information>
   </Order>
   <Order OrderID="ID-2" Key="1235">
     <Event uuid="46cb4f55-c773-455b-9410-b08f9cd6a135">
@@ -78,7 +78,7 @@
       </FullAddress>
       <Mail>joannam@gmail.com</Mail>
     </Customer>
-    <Information> Zleceniem jest wykonanie zdjęć podczas ślubu kościelnego. </Information>
+    <Information>Zleceniem jest wykonanie zdjęć podczas ślubu kościelnego.</Information>
   </Order>
   <Order OrderID="ID-3" Key="6341">
     <Event uuid="1fd251eb-b7b5-4456-a40d-2d735c891c4e">
@@ -116,7 +116,7 @@
       </FullAddress>
       <Mail>K.M@wp.pl</Mail>
     </Customer>
-    <Information> Wykonanie portretu w parku. </Information>
+    <Information>Wykonanie portretu w parku.</Information>
   </Order>
   <Order OrderID="ID-4" Key="1276">
     <Event uuid="26d4de41-6f67-49cc-9c3d-c287a429b3ac">
@@ -168,7 +168,7 @@
       </FullAddress>
       <Mail>biuro@firma.reklamowa.com.pl</Mail>
     </Customer>
-    <Information> Sesja plenerowe. </Information>
+    <Information>Sesja plenerowe.</Information>
   </Order>
   <Order OrderID="ID-5" Key="7321">
     <Event uuid="eda3fcbf-65bf-4746-a9d5-f77816ab7134">
@@ -258,7 +258,7 @@
       </FullAddress>
       <Mail>anna@wp.pl</Mail>
     </Customer>
-    <Information> Sesja plenerowe. </Information>
+    <Information>Sesja plenerowe.</Information>
   </Order>
   <Order OrderID="ID-7" Key="3267">
     <Event uuid="df4e12f8-6554-4ac1-8e87-5deb21192be2">
@@ -356,10 +356,12 @@
       </FullAddress>
       <Mail>annaAniaAnna@wp.pl</Mail>
     </Customer>
-    <Information> Zdjęcia ślubne z dojazdem do domu Państwa Młodych i podczas Ślubu oraz Wesela. </Information>
+    <Information>Zdjęcia ślubne z dojazdem do domu Państwa Młodych i podczas Ślubu oraz Wesela.</Information>
   </Order>
   <Order Key="4556">
-    <Information>sugestie od klienta: bez zdjęć pijanych pracowników, za zdjęcie kompromitujące prezesa płatność ekstra</Information>
+    <Information>sugestie od klienta: bez zdjęć pijanych pracowników, za zdjęcie kompromitujące prezesa płatność
+      ekstra
+    </Information>
     <Cost Currency="PLN">
       <FullCost>600</FullCost>
       <Prepayment>0</Prepayment>
@@ -367,7 +369,7 @@
     </Cost>
     <Customer uuid="bdc588e2-c448-4647-aa54-45dc7079a251">
       <CustomerName>
-        <FName>Michał </FName>
+        <FName>Michał</FName>
         <LName>Bratosik</LName>
       </CustomerName>
       <TelNo>795458789</TelNo>
@@ -604,7 +606,7 @@
 
     <Customer uuid="3a4fd617-824b-4491-9cf3-7678ea0015d2">
       <CustomerName>
-        <FName>Dominik </FName>
+        <FName>Dominik</FName>
         <LName>Anioł</LName>
       </CustomerName>
       <TelNo>795456789</TelNo>
@@ -614,7 +616,7 @@
         <State>Łódzkie</State>
         <City>Skierniewice</City>
         <Zip>96-100</Zip>
-        <Address> Batorego 64 C</Address>
+        <Address>Batorego 64 C</Address>
       </FullAddress>
       <Company>
         <CompanyName/>
@@ -688,7 +690,7 @@
           <Country>Polska</Country>
           <State>Łódzkie</State>
           <City>Łódź</City>
-          <Address> Ignacego Skorupki 9</Address>
+          <Address>Ignacego Skorupki 9</Address>
           <Zip>90-458</Zip>
         </FullAddress>
       </EventAddress>
@@ -771,6 +773,90 @@
         <City>Łowicz</City>
         <Zip>99-400</Zip>
         <Address>Bratkowice, 33/1</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName/>
+        <TaxNo/>
+      </Company>
+    </Customer>
+  </Order>
+  <Order Key="89749">
+    <Information>Zdjęcie koparki na aukcję</Information>
+    <Cost Currency="EUR">
+      <FullCost>100</FullCost>
+      <Prepayment>10</Prepayment>
+      <Invoice>TAK</Invoice>
+    </Cost>
+    <Customer uuid="b0335fe1-bdc2-411a-992d-c39cf5b346e6">
+      <CustomerName>
+        <FName>Daniel</FName>
+        <LName>Maciejewski</LName>
+      </CustomerName>
+      <TelNo>514456547</TelNo>
+      <Mail>danielM@wp.pl</Mail>
+      <FullAddress>
+        <Country>Polska</Country>
+        <State>Łódzkie</State>
+        <City>Ujazd</City>
+        <Zip>96-115</Zip>
+        <Address>Ujazd 15</Address>
+      </FullAddress>
+      <Company>
+        <CompanyName>PHU DM</CompanyName>
+        <TaxNo>8166655489</TaxNo>
+      </Company>
+    </Customer>
+    <Event uuid="c9e0b3e5-3a00-4ef5-aeb0-5e8e08cce5bf">
+      <EventName>Zdjęcia na żwirowni</EventName>
+      <StartDate>2017-06-21 9:00 AM</StartDate>
+      <EndDate>2017-06-21 3:00 PM</EndDate>
+      <EventAddress>
+        <Comment>Żwirownia</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łowicz</City>
+          <Address>Żwirowa</Address>
+          <Zip>99-400</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+  </Order>
+  <Order Key="15665">
+    <Information>zdjęcia dla konkurencji płatne ekstra</Information>
+    <Cost Currency="PLN">
+      <FullCost>1000000</FullCost>
+      <Prepayment>10</Prepayment>
+      <Invoice>TAK</Invoice>
+    </Cost>
+    <Event uuid="78e7c860-c473-4867-8e35-0440f836a38c">
+      <EventName>zdjęcia dla konkurencji płatne ekstra</EventName>
+      <StartDate>2017-09-01 12:00 AM</StartDate>
+      <EndDate>2017-09-01 2:00 PM</EndDate>
+      <EventAddress>
+        <Comment>skansen na ul Milionowej</Comment>
+        <FullAddress>
+          <Country>Polska</Country>
+          <State>Łódzkie</State>
+          <City>Łódź</City>
+          <Address>Milionowa</Address>
+          <Zip>90-361</Zip>
+        </FullAddress>
+      </EventAddress>
+    </Event>
+    <Customer uuid="5398f2e3-10aa-4a26-9a0d-d9f7ebd2f2d2">
+      <CustomerName>
+        <FName>Monika</FName>
+        <LName>Nowak</LName>
+      </CustomerName>
+      <TelNo>608333123</TelNo>
+      <Mail>Nowak@photography-super-zdjecia.pl</Mail>
+      <FullAddress>
+        <Country/>
+        <State/>
+        <City/>
+        <Zip/>
+        <Address/>
       </FullAddress>
       <Company>
         <CompanyName/>

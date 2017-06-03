@@ -8,14 +8,6 @@
     <comment/>
     <package>option2</package>
   </inquiry>
-  <inquiry Key="0001">
-    <mail>piotr.bet@dlugoleccy.com.pl</mail>
-    <name>piotr</name>
-    <phone>888777666</phone>
-    <date>05.01.2018</date>
-    <comment/>
-    <package>option2</package>
-  </inquiry>
   <inquiry Key="4556">
     <mail>michał@onet.pl</mail>
     <name>Michał Bratosik</name>
@@ -152,12 +144,12 @@
     <comment>Potrzebuję wykonać zdjęcia promocyjne szytych przez nas zabawnych strojów dla królików i kaczek.</comment>
     <package>option1</package>
   </inquiry>
-  <inquiry Key="41796">
-    <mail>piotr.bet@dlugoleccy.com.pl</mail>
-    <name>piotr</name>
-    <phone>888777666</phone>
-    <date>05.01.2018</date>
-    <comment/>
+  <inquiry Key="15665">
+    <mail>Nowak@photography-super-zdjecia.pl</mail>
+    <name>Monika Nowak Photography</name>
+    <phone>608333123</phone>
+    <date>dowolny</date>
+    <comment>Cześć, chciałabym założyć firmę fotograficzną, ale na razie sama nie dysponuje aparatem fotograficznym, dlatego potrzebuje firmy która wykona dla mnie zdjęcia które będą mogła dodać do swojego portfolio, pozdrawiam Monika Photography</comment>
     <package>option1</package>
   </inquiry>
 </inquiries>
